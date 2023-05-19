@@ -29,7 +29,7 @@ const LoginBoard = () => {
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
 
-  const handleLogin = (event) => {
+  const handleLogin = (event: React.FormEvent) => {
     event.preventDefault();
     // Here you can add your login logic
     console.log('Username:', username);
