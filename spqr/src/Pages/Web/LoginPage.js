@@ -4,8 +4,7 @@ import Button from '@mui/material/Button';
 import jwt_decode from 'jwt-decode';
 import { CognitoUser, AuthenticationDetails, CognitoUserPool } from 'amazon-cognito-identity-js';
 import { useNavigate } from 'react-router-dom';
-
-const logo = '/Assets/Images/qr_logo.png';
+import logo from '../../Assets/Images/qr_logo.png';
 
 // Styled components
 const StyledDiv = styled('div')(({ theme }) => ({

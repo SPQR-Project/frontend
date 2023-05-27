@@ -1,13 +1,86 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: bold;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  line-height: normal;
+  font-family: -apple-system, BlinkMacSystemFont, 'Pretendard-Regular', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+:root {
+  /* fonts */
+  --label-3-bold: 'Pretendard-Bold';
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  /* font sizes */
+  --label-3-bold-size: 14px;
+  --caption-regular-size: 12px;
+  --title-2-bold-size: 17px;
+  --title-1-bold-size: 20px;
+  --label-1-bold-size: 18px;
+  --label-2-bold-size: 16px;
+  --headline-bold-size: 24px;
+  --body-2-regular-size: 15px;
+
+  /* Colors */
+  --text-normal: #2a2d32;
+  --primary-normal: #003a54;
+  --background-alternative: #f4f4f6;
+  --line-alternative: #e8eaed;
+  --background-normal: #fff;
+  --text-alternative-1: #686f7d;
+  --text-strong: #0e0f10;
+  --line-strong: #c1c5cd;
+  --line-normal: #d7dadf;
+  --text-alternative-2: #818998;
+  --status-alert-2: #ffeeec;
+  --status-alert-1: #f44336;
+  --color-dimgray: #565c67;
+  --status-positive-2: #e6edff;
+  --status-postive-1: #2979ff;
+
+  /* Gaps */
+  --gap-5xs: 8px;
+  --gap-5xl: 24px;
+  --gap-base: 16px;
+  --gap-13xl: 32px;
+  --gap-2xl: 21px;
+  --gap-9xs: 4px;
+  --gap-6xl: 25px;
+  --gap-11xs: 2px;
+  --gap-29xl: 48px;
+  --gap-21xl: 40px;
+  --gap-xs: 12px;
+
+  /* Paddings */
+  --padding-base: 16px;
+  --padding-5xl: 24px;
+  --padding-5xs: 8px;
+  --padding-9xs: 4px;
+  --padding-13xl: 32px;
+  --padding-3xs: 10px;
+  --padding-21xl: 40px;
+  --padding-xs: 12px;
+  --padding-7xs: 6px;
+  --padding-11xs: 2px;
+
+  /* border radiuses */
+  --br-81xl: 100px;
+  --br-5xs: 8px;
+  --br-5xl: 24px;
+  --br-base: 16px;
+  --br-9xs: 4px;
 }
