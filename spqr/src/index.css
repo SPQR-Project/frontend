@@ -27,15 +27,15 @@ body {
   --font-bold: 'Pretendard-Bold';
 
   /* font sizes */
-  --headline-1-size: 24px;
-  --title-1-size: 20px;
-  --title-2-size: 17px;
-  --body-1-size: 16px;
-  --body-2-size: 15px;
-  --label-1-size: 18px;
-  --label-2-size: 16px;
-  --label-3-size: 14px;
-  --caption-1-size: 12px;
+  --headline-1: 24px;
+  --title-1: 20px;
+  --title-2: 17px;
+  --body-1: 16px;
+  --body-2: 15px;
+  --label-1: 18px;
+  --label-2: 16px;
+  --label-3: 14px;
+  --caption-1: 12px;
 
   /* Colors */
   --primary-normal: #003a54;
@@ -44,6 +44,7 @@ body {
   --secondary-normal: #E8EAED;
   --interaction-secondary-hover: #D7DADF;
   --interaction-secondary-pressed: #C1C5CD;
+  --white-white: #FFFFFF;
   --status-alert-1: #f44336;
   --status-alert-2: #ffeeec;
   --status-postive-1: #2979ff;
@@ -59,6 +60,7 @@ body {
   --line-normal: #d7dadf;
   --line-alternative: #e8eaed;
   --color-gray-600: #565c67;
+  --color-gray-900: #0E0F10;
 
   /* Gaps */
   --gap-11xs: 2px;

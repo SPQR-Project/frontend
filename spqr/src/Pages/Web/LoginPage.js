@@ -35,7 +35,7 @@ function LoginPage(props) {
       onSuccess: (result) => {
         const decodedToken = jwt_decode(result.getAccessToken().getJwtToken());
         const isHQUser = decodedToken['cognito:groups'].includes('headquarters')
-        navigate('/order',  { state: { isHQUser } });
+        navigate('/order_w',  { state: { isHQUser } });
        
       },
       onFailure: (err) => {
