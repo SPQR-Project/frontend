@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LoginPage from './Pages/Web/LoginPage';  // Assuming LoginPage is in the same directory
-import OrderPage from './Pages/Web/OrderPage';  // Assuming OrderPage is in the same directory
+import LoginPage from './Pages/Web/LoginPage';  
+import OrderPage from './Pages/Web/OrderPage';  
 
 function App() {
   return (

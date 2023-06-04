@@ -36,21 +36,27 @@ body {
   --body-2-regular-size: 15px;
 
   /* Colors */
-  --text-normal: #2a2d32;
   --primary-normal: #003a54;
-  --background-alternative: #f4f4f6;
-  --line-alternative: #e8eaed;
-  --background-normal: #fff;
-  --text-alternative-1: #686f7d;
+  --interaction-primary-hover: #002A3D;
+  --interaction-primary-pressed: #001B27;
+  --secondary-normal: #E8EAED;
+  --interaction-secondary-hover: #D7DADF;
+  --interaction-secondary-pressed: #C1C5CD;
+  --status-alert-1: #f44336;
+  --status-alert-2: #ffeeec;
+  --status-postive-1: #2979ff;
+  --status-positive-2: #e6edff;
   --text-strong: #0e0f10;
+  --text-normal: #2a2d32;
+  --text-alternative-1: #686f7d;
+  --text-alternative-2: #818998;
+  --text-assistive: #D7DADF;
+  --background-normal: #fff;
+  --background-alternative: #f4f4f6;
   --line-strong: #c1c5cd;
   --line-normal: #d7dadf;
-  --text-alternative-2: #818998;
-  --status-alert-2: #ffeeec;
-  --status-alert-1: #f44336;
-  --color-dimgray: #565c67;
-  --status-positive-2: #e6edff;
-  --status-postive-1: #2979ff;
+  --line-alternative: #e8eaed;
+  --color-gray-600: #565c67;
 
   /* Gaps */
   --gap-5xs: 8px;

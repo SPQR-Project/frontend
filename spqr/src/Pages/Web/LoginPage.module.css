@@ -1,0 +1,61 @@
+.loginPage {
+    background-color: var(--background-normal);
+    border-radius: var(--br-5xl);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--padding-5xl);
+    box-sizing: border-box;
+    height: 100vh;
+    justify-content: center;
+  }
+  
+  .fieldWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 352px;
+  }
+  
+  .logoImage {
+    width: 352px;
+    height: 352px;
+    margin-bottom: var(--gap-5xl);
+  }
+  
+  .inputLabel {
+    color: var(--text-alternative-1);
+    font-family: var(--label-3-bold);
+    font-size: var(--label-3-bold-size);
+    margin-bottom: var(--gap-9xs);
+  }
+  
+  .inputField {
+    border: 1px solid var(--line-strong);
+    border-radius: var(--br-5xs);
+    width: 318px;
+    height: 22px;
+    color: var(--text-alternative-1);
+    margin-bottom: var(--gap-11xs);
+    padding: var(--padding-5xs) var(--padding-base);
+    font-family: 'Pretendard-Regular';
+    font-size: var(--label-2-bold-size);
+  }
+  
+  .inputField:focus {
+    outline: none;
+    border-color: var(--primary-normal);
+  }
+  
+  .styledButton {
+    width: 352px;
+    margin-top: var(--gap-2xl);
+    height: 40px;
+    color: var(--background-normal);
+    font-family: var(--label-3-bold);
+    font-size: var(--label-2-bold-size);
+    background-color: var(--primary-normal);
+    border-radius: var(--br-5xs);
+  }
+  
