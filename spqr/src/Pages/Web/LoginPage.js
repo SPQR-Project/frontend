@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import jwt_decode from 'jwt-decode';
 import { CognitoUser, AuthenticationDetails, CognitoUserPool } from 'amazon-cognito-identity-js';
 import { useNavigate } from 'react-router-dom';
-import logo from '../../Assets/Images/qr_logo.png';
+
 import styles from './LoginPage.module.css';
+import logo from '../../Assets/Images/qr_logo.png';
 
 function LoginPage(props) {
   const [username, setUsername] = useState('');
