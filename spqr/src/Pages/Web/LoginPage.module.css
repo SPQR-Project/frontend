@@ -26,7 +26,7 @@
   
   .inputLabel {
     color: var(--text-alternative-1);
-    font-family: var(--label-3-bold);
+    font-family: var(--label-3-regular);
     font-size: var(--label-3-bold-size);
     margin-bottom: var(--gap-9xs);
   }
@@ -39,7 +39,7 @@
     color: var(--text-alternative-1);
     margin-bottom: var(--gap-11xs);
     padding: var(--padding-5xs) var(--padding-base);
-    font-family: 'Pretendard-Regular';
+    font-family: var(--font-regular);
     font-size: var(--label-2-bold-size);
   }
   

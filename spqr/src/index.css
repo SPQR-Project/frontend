@@ -23,17 +23,19 @@ body {
 }
 :root {
   /* fonts */
-  --label-3-bold: 'Pretendard-Bold';
+  --font-regular: 'Pretendard';
+  --font-bold: 'Pretendard-Bold';
 
   /* font sizes */
-  --label-3-bold-size: 14px;
-  --caption-regular-size: 12px;
-  --title-2-bold-size: 17px;
-  --title-1-bold-size: 20px;
-  --label-1-bold-size: 18px;
-  --label-2-bold-size: 16px;
-  --headline-bold-size: 24px;
-  --body-2-regular-size: 15px;
+  --headline-1-size: 24px;
+  --title-1-size: 20px;
+  --title-2-size: 17px;
+  --body-1-size: 16px;
+  --body-2-size: 15px;
+  --label-1-size: 18px;
+  --label-2-size: 16px;
+  --label-3-size: 14px;
+  --caption-1-size: 12px;
 
   /* Colors */
   --primary-normal: #003a54;
@@ -59,34 +61,34 @@ body {
   --color-gray-600: #565c67;
 
   /* Gaps */
-  --gap-5xs: 8px;
-  --gap-5xl: 24px;
-  --gap-base: 16px;
-  --gap-13xl: 32px;
-  --gap-2xl: 21px;
-  --gap-9xs: 4px;
-  --gap-6xl: 25px;
   --gap-11xs: 2px;
-  --gap-29xl: 48px;
-  --gap-21xl: 40px;
+  --gap-9xs: 4px;
+  --gap-5xs: 8px;
   --gap-xs: 12px;
+  --gap-base: 16px;
+  --gap-2xl: 21px;
+  --gap-5xl: 24px;
+  --gap-6xl: 25px;
+  --gap-13xl: 32px;
+  --gap-21xl: 40px;
+  --gap-29xl: 48px;
 
   /* Paddings */
+  --padding-11xs: 2px;
+  --padding-9xs: 4px;
+  --padding-7xs: 6px;
+  --padding-5xs: 8px;
+  --padding-3xs: 10px;
+  --padding-xs: 12px;
   --padding-base: 16px;
   --padding-5xl: 24px;
-  --padding-5xs: 8px;
-  --padding-9xs: 4px;
   --padding-13xl: 32px;
-  --padding-3xs: 10px;
   --padding-21xl: 40px;
-  --padding-xs: 12px;
-  --padding-7xs: 6px;
-  --padding-11xs: 2px;
 
   /* border radiuses */
-  --br-81xl: 100px;
-  --br-5xs: 8px;
-  --br-5xl: 24px;
-  --br-base: 16px;
   --br-9xs: 4px;
+  --br-5xs: 8px;
+  --br-base: 16px;
+  --br-5xl: 24px;
+  --br-81xl: 100px;
 }
