@@ -4,7 +4,7 @@ import { CognitoUser, AuthenticationDetails, CognitoUserPool } from 'amazon-cogn
 import { useNavigate } from 'react-router-dom';
 
 import styles from './LoginPage.module.css';
-import logo from '../../Assets/Images/qr_logo.png';
+import logo_image from '../../Assets/Images/qr_logo.png';
 
 function LoginPage(props) {
   const [username, setUsername] = useState('');
@@ -48,7 +48,7 @@ function LoginPage(props) {
 
   return (
     <div className={styles.loginPage}>
-      <img src={logo} alt="Logo" className={styles.logoImage} /> 
+      <img src={logo_image} alt="Logo" className={styles.logoImage} /> 
       <div className={styles.fieldWrapper}>
         <p className={styles.inputLabel}>ID</p>
         <input 

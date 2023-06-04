@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import styles from "./MenuPage.module.css";
-import cart from '../../Assets/Images/cart-white.svg';
+import cart_icon from '../../Assets/Images/cart-white.svg';
 
 // Here is the JSON data
 const jsonData = {
@@ -21,7 +21,6 @@ const Mobile = () => {
   const [menuData, setMenuData] = useState(null);
 
   useEffect(() => {
-    // Normally, this data would be fetched from an API. For simplicity, we're using the JSON data directly.
     setMenuData(jsonData.data.menu);
   }, []);
 
@@ -33,21 +32,22 @@ const Mobile = () => {
     return <div>Loading...</div>;
   }
   
+  //Gets currentPath to update logo and table number
   const currentPath = window.location.pathname;
   const pathList = currentPath.split("/");
-  const logoSource = `https://spqr-menu.s3.ap-northeast-2.amazonaws.com/${pathList[2]}/logo.jpg`;
+  const restaurantLogoImage = `https://spqr-menu.s3.ap-northeast-2.amazonaws.com/${pathList[2]}/logo.jpg`;
   const tableNumber = pathList[4];
 
   return (
     <div className={styles.mobile}>
       <div className={styles.gnbMobile}>
         <div className={styles.icon}>
-          <img className={styles.cartWhiteIcon} alt="" src={cart} />
+          <img className={styles.cartWhiteIcon} alt="" src={cart_icon} />
         </div>
       </div>
       <div className={styles.header}>
         <div className={styles.logo}>
-          <img className={styles.logoChild} alt="" src={logoSource} />
+          <img className={styles.logoChild} alt="" src={restaurantLogoImage} />
         </div>
         <div className={styles.tablenumber}>
           <b className={styles.label}>테이블 번호</b>
