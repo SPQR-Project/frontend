@@ -18,8 +18,8 @@ function PageHandler() {
     let metaDescription = "";
 
     switch (pathname) {
-      case "/menu_m/:restaurant_id/:branch_id/:table_number/":
-        title = "";
+      case "/menu_m/:restaurant_id/:branch_id/:table_number":
+        title = "Menu";
         metaDescription = "This is the Mobile Menu Page";
         break;
       case "/login_w":
