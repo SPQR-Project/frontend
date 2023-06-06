@@ -25,6 +25,36 @@ const jsonData = {
 const MenuPage = () => {
   const navigate = useNavigate();
   const [menuData, setMenuData] = useState(null);
+  
+  useEffect(() => {
+    const scrollAnimElements = document.querySelectorAll(
+      "[data-animate-on-scroll]"
+    );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting || entry.intersectionRatio > 0) {
+            const targetElement = entry.target;
+            targetElement.classList.add(styles.animate);
+            observer.unobserve(targetElement);
+          }
+        }
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+
+    for (let i = 0; i < scrollAnimElements.length; i++) {
+      observer.observe(scrollAnimElements[i]);
+    }
+
+    return () => {
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.unobserve(scrollAnimElements[i]);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     setMenuData(jsonData.data.menu);
@@ -34,9 +64,10 @@ const MenuPage = () => {
     navigate(`/menu_m/${id}`);
   }, [navigate]);
 
-  if (!menuData) {
+  /*if (!menuData) {
     return <div>Loading...</div>;
-  }
+  };*/
+  
 
   return (
     <div className={styles.mobile}>
