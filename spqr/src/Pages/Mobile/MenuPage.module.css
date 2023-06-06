@@ -104,10 +104,6 @@
 .tabmenuitemPillParent {
   flex-direction: row;
   gap: var(--gap-5xs);
-  opacity: 0;
-}
-.tabmenuitemPillParent.animate {
-  animation: 1s ease 0s 1 normal forwards fade-in;
 }
 .tabmenugroup {
   align-self: stretch;
@@ -137,6 +133,9 @@
   position: relative;
   width: 96px;
   height: 96px;
+  object-fit: cover;
+  border: 0px solid transparent;
+  border-radius: var(--br-9 xs) ; 
 }
 .description,
 .name {
@@ -266,23 +265,4 @@
   font-size: var(--caption-1);
   color: var(--text-strong);
   font-family: var(--font-bold);
-}
-@media screen and (max-width: 420px) {
-  .tabmenuitemPillParent {
-    width: 100%;
-  }
-  .tabmenugroup {
-    opacity: 0;
-  }
-  .tabmenugroup.animate {
-    animation: 1s ease 0s 1 normal forwards fade-in;
-  }
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
 }

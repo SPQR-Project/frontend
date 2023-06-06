@@ -88,6 +88,7 @@ body {
   --padding-21xl: 40px;
 
   /* border radiuses */
+  --br-11xs: 2px;
   --br-9xs: 4px;
   --br-5xs: 8px;
   --br-base: 16px;
