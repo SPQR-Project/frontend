@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 import styles from "./MenuDetailPage.module.css";
 import cartIcon from "../../Assets/Images/cart-black.svg";
 import minusIcon from "../../Assets/Images/minus.svg";
@@ -8,11 +8,14 @@ import arrowIcon from "../../Assets/Images/arrow-back.svg";
 
 const MenuDetailPage = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
   const [menuDetailData, setMenuDetailData] = useState(null);
   const [partialTotal, setPartialTotal] = useState(0);
   const [total, setTotal] = useState(0);
   const [quantity, setQuantity] = useState(1);
-
+  const currentTempId = location.state ? location.state.tempId : 0;
+  console.log(currentTempId);
   const {
     restaurant_id: restaurantId,
     branch_id: branchId,
@@ -107,13 +110,20 @@ const MenuDetailPage = () => {
 
       for (let i = 0; i < currentQuantity; i++) {
         const checkedOptions = currentMenuData.option_categories.flatMap(
-          (category) =>
+          (category, categoryIndex) =>
             category.option_menus
-              .filter((option) => option.checked)
-              .map((option) => ({
+              .map((option, optionIndex) => ({
+                option,
+                optionIndex,
+                categoryIndex,
+              }))
+              .filter(({ option }) => option.checked)
+              .map(({ option, optionIndex, categoryIndex }) => ({
                 option_id: option.id,
                 option_name: option.name,
                 option_price: option.price,
+                option_category_idx: categoryIndex,
+                option_idx: optionIndex,
               }))
         );
 
