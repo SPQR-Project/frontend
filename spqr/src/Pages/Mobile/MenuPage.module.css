@@ -135,7 +135,7 @@
   height: 96px;
   object-fit: cover;
   border: 0px solid transparent;
-  border-radius: var(--br-9 xs) ; 
+  border-radius: var(--br-9xs) ; 
 }
 .description,
 .name {
@@ -151,6 +151,7 @@
 }
 .description {
   font-size: var(--caption-1);
+  font-family: var(--font-regular);
   letter-spacing: 0.03em;
   line-height: 16px;
   color: var(--text-alternative-1);

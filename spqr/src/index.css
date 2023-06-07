@@ -15,15 +15,13 @@
 body {
   margin: 0;
   line-height: normal;
-  font-family: -apple-system, BlinkMacSystemFont, 'Pretendard-Regular', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Pretendard-Regular';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 :root {
   /* fonts */
-  --font-regular: 'Pretendard';
+  --font-regular: 'Pretendard-Regular';
   --font-bold: 'Pretendard-Bold';
 
   /* font sizes */

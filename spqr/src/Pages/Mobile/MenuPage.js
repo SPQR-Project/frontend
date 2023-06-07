@@ -33,9 +33,9 @@ const MenuPage = () => {
 
   const onMenuClick = useCallback(
     (id) => {
-      navigate(`/menu_m/${id}`);
+      navigate(`/menu_m/${restaurantId}/${branchId}/${tableNumber}/${id}`);
     },
-    [navigate]
+    [navigate, restaurantId, branchId, tableNumber]
   );
   console.log(menuData);
   if (!menuData) {
