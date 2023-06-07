@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import styles from "./MenuPage.module.css";
 import cartIcon from "../../Assets/Images/cart-white.svg";
@@ -8,12 +8,13 @@ const MenuPage = () => {
   const navigate = useNavigate();
   const [menuData, setMenuData] = useState(null);
 
-  const currentPath = window.location.pathname;
-  const pathList = currentPath.split("/");
-  const restaurantId = pathList[2];
-  const branchId = pathList[3];
-  const tableNumber = pathList[4];
-  const restaurantLogoImage = `https://spqr-menu.s3.ap-northeast-2.amazonaws.com/${pathList[2]}/logo.jpg`;
+  const {
+    restaurant_id: restaurantId,
+    branch_id: branchId,
+    table_number: tableNumber,
+  } = useParams();
+
+  const restaurantLogoImage = `https://spqr-menu.s3.ap-northeast-2.amazonaws.com/${restaurantId}/logo.jpg`;
 
   useEffect(() => {
     const fetchMenuData = async () => {

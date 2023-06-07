@@ -1,3 +1,12 @@
+.gnbSpace {
+    align-self: stretch;
+    background-color: var(--background-normal);
+    justify-content: flex-end;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
 .arrowLeftIcon {
     position: relative;
     width: 24px;
@@ -119,10 +128,27 @@
     width: 24px;
     height: 24px;
   }
-  .optionlabel {
+  .optionlabelname {
     position: relative;
     letter-spacing: 0.01em;
     line-height: 24px;
+    max-width: 75%;
+  }
+  .optionlabelprice {
+    position: relative;
+    letter-spacing: 0.01em;
+    line-height: 24px;
+  }
+  .optionlabelquantity {
+    position: relative;
+    letter-spacing: 0.01em;
+    line-height: 24px;
+  }
+  .labelcontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 89%; /* Adjust width as needed */
   }
   .radiooptions,
   .radiooptions1 {

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import styles from "./MenuDetailPage.module.css";
 import cartIcon from "../../Assets/Images/cart-black.svg";
 import minusIcon from "../../Assets/Images/minus.svg";
@@ -9,32 +9,140 @@ import arrowIcon from "../../Assets/Images/arrow-back.svg";
 const MenuDetailPage = () => {
   const navigate = useNavigate();
   const [menuDetailData, setMenuDetailData] = useState(null);
+  const [partialTotal, setPartialTotal] = useState(0);
+  const [total, setTotal] = useState(0);
+  const [quantity, setQuantity] = useState(1);
 
-  const currentPath = window.location.pathname;
-  const pathList = currentPath.split("/");
-  const restaurantId = pathList[2];
-  const branchId = pathList[3];
-  const tableNumber = pathList[4];
-  const menuID = pathList[5];
+  const {
+    restaurant_id: restaurantId,
+    branch_id: branchId,
+    table_number: tableNumber,
+    menu_id: menuId,
+  } = useParams();
+
+  const changeQuantity = (num) => {
+    const newQuantity = quantity + num;
+    if (newQuantity >= 1) {
+      // Or replace 0 with the minimum value you want
+      setQuantity(newQuantity);
+      let newTotal = partialTotal * newQuantity;
+      setTotal(newTotal);
+      //console.log(total);
+    }
+  };
+
+  const handleCheck = (categoryIndex, optionIndex) => {
+    setMenuDetailData((prevData) => {
+      const newData = JSON.parse(JSON.stringify(prevData));
+
+      const option =
+        newData.option_categories[categoryIndex].option_menus[optionIndex];
+      option.checked = !option.checked;
+
+      let newTotal = menuDetailData.price;
+      newData.option_categories.forEach((category) => {
+        category.option_menus.forEach((option) => {
+          if (option.checked) {
+            newTotal += option.price;
+          }
+        });
+      });
+
+      setPartialTotal(newTotal);
+      setTotal(newTotal * quantity);
+      //console.log(newData);
+      return newData;
+    });
+  };
 
   useEffect(() => {
     const fetchMenuDetailData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8080/menu_m/${restaurantId}/${branchId}/${tableNumber}/${menuID}`
+          `http://localhost:8080/menu_m/${restaurantId}/${branchId}/${tableNumber}/${menuId}`
         );
         const jsonData = await response.json();
-        setMenuDetailData(jsonData.data["menu details"]);
+        const modifiedData = jsonData.data["menu details"];
+        modifiedData.option_categories = modifiedData.option_categories.map(
+          (category) => ({
+            ...category,
+            option_menus: category.option_menus.map((option) => ({
+              ...option,
+              checked: false,
+            })),
+          })
+        );
+        setMenuDetailData(modifiedData);
+        setPartialTotal(modifiedData.price);
+        setTotal(modifiedData.price);
       } catch (error) {
         console.log("Error fetching menu data:", error);
       }
     };
     fetchMenuDetailData();
-  }, [restaurantId, branchId, tableNumber, menuID]);
+  }, [restaurantId, branchId, tableNumber, menuId]);
 
-  const onButton2Click = useCallback(() => {
-    navigate("/mobile");
-  }, [navigate]);
+  const onSubmitButtonClick = useCallback(
+    (currentMenuData, currentQuantity) => {
+      // Retrieve the existing data from local storage
+      let existingCart = localStorage.getItem("cart");
+
+      let temp_id = 1;
+
+      if (existingCart) {
+        existingCart = JSON.parse(existingCart);
+        if (Array.isArray(existingCart) && existingCart.length > 0) {
+          // Find the largest temp_id
+          const maxTempId = Math.max(
+            ...existingCart.map((item) => item.temp_id)
+          );
+          // Set temp_id to be one more than the largest existing temp_id
+          temp_id = maxTempId + 1;
+        }
+      }
+
+      const newCart = [];
+      //console.log(currentQuantity);
+      //console.log(currentMenuData);
+
+      for (let i = 0; i < currentQuantity; i++) {
+        const checkedOptions = currentMenuData.option_categories.flatMap(
+          (category) =>
+            category.option_menus
+              .filter((option) => option.checked)
+              .map((option) => ({
+                option_id: option.id,
+                option_name: option.name,
+                option_price: option.price,
+              }))
+        );
+
+        newCart.push({
+          temp_id: temp_id++,
+          menu_id: currentMenuData.id,
+          menu_name: currentMenuData.name,
+          menu_price: currentMenuData.price,
+          image_url: currentMenuData.image_url,
+          option_menus: checkedOptions,
+        });
+      }
+
+      // Parse the existing data to convert it back to an object
+      existingCart = existingCart ? existingCart : [];
+
+      // Now let's add the new data to existing data
+      let finalCart = [...existingCart, ...newCart];
+
+      // Store the updated data back in local storage
+      localStorage.setItem("cart", JSON.stringify(finalCart));
+      let check_cart = localStorage.getItem("cart");
+      console.log(check_cart);
+      //localStorage.removeItem("cart");
+
+      navigate(-1);
+    },
+    [navigate]
+  );
 
   const onArrowIconClick = useCallback(() => {
     navigate(-1); // Use -1 to go back to the previous page
@@ -47,6 +155,7 @@ const MenuDetailPage = () => {
   return (
     <div className={styles.mobile}>
       <div className={styles.gnbMobileParent}>
+        <div className={styles.gnbSpace}></div>
         <div className={styles.gnbMobile}>
           <button className={styles.icon} onClick={onArrowIconClick}>
             <img className={styles.arrowLeftIcon} alt="" src={arrowIcon} />
@@ -83,11 +192,19 @@ const MenuDetailPage = () => {
                 {category.option_menus.map((option, optionIndex) => (
                   <div key={optionIndex} className={styles.radiooptions}>
                     <div className={styles.radiooptions1}>
-                      <input className={styles.unchecked2} type="checkbox" />
-                      <div className={styles.optionlabel}>{option.name}</div>
+                      <input
+                        className={styles.unchecked2}
+                        type="checkbox"
+                        checked={option.checked}
+                        onChange={() => handleCheck(index, optionIndex)}
+                      />
                     </div>
-                    <div className={styles.optionlabel}>
-                      +{option.price.toLocaleString()}원
+                    <div className={styles.labelcontainer}>
+                      <div className={styles.optionlabelname}>
+                        {option.name}
+                      </div>
+                      <div className={styles.optionlabelprice}></div>+
+                      {option.price.toLocaleString()}원
                     </div>
                   </div>
                 ))}
@@ -95,16 +212,22 @@ const MenuDetailPage = () => {
             </div>
           ))}
           <div className={styles.div}>
-            <b className={styles.optionlabel}>수량</b>
+            <b className={styles.optionlabelquantity}>수량</b>
             <div className={styles.nuberinput}>
-              <button className={styles.button}>
+              <button
+                onClick={() => changeQuantity(-1)}
+                className={styles.button}
+              >
                 <div className={styles.buttonChild} />
                 <img className={styles.minusIcon} alt="" src={minusIcon} />
               </button>
               <div className={styles.counter}>
-                <div className={styles.div1}>1</div>
+                <div className={styles.div1}>{quantity}</div>
               </div>
-              <button className={styles.button}>
+              <button
+                onClick={() => changeQuantity(1)}
+                className={styles.button}
+              >
                 <div className={styles.buttonItem} />
                 <img className={styles.minusIcon} alt="" src={plusIcon} />
               </button>
@@ -113,8 +236,11 @@ const MenuDetailPage = () => {
         </div>
       </div>
       <div className={styles.div2}>
-        <b className={styles.label1}>총 20,000원</b>
-        <button className={styles.button2} onClick={onButton2Click}>
+        <b className={styles.label1}>총 {total.toLocaleString()}원</b>
+        <button
+          className={styles.button2}
+          onClick={() => onSubmitButtonClick(menuDetailData, quantity)}
+        >
           <b className={styles.label5}>장바구니에 추가</b>
         </button>
       </div>
