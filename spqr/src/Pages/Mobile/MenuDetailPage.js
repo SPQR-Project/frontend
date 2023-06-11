@@ -15,7 +15,7 @@ const MenuDetailPage = () => {
   const [total, setTotal] = useState(0);
   const [quantity, setQuantity] = useState(1);
 
-  const currentTempId = location.state ? location.state.tempId : 0;
+  const currentTempId = location.state ? location.state.temp_id : 0;
   console.log(currentTempId);
   const {
     restaurant_id: restaurantId,
@@ -190,10 +190,12 @@ const MenuDetailPage = () => {
       let check_cart = localStorage.getItem("cart");
       console.log(check_cart);
       //localStorage.removeItem("cart");
+      console.log(currentTempId);
       if (currentTempId !== 0) {
-        navigate(`/cart_m/${restaurantId}/${branchId}/${tableNumber}/`);
+        navigate(`/cart_m/${restaurantId}/${branchId}/${tableNumber}`);
+      } else {
+        navigate(-1);
       }
-      navigate(-1);
     },
     [navigate, currentTempId, restaurantId, branchId, tableNumber]
   );

@@ -1,3 +1,12 @@
+.gnbSpace {
+    align-self: stretch;
+    background-color: var(--background-normal);
+    justify-content: flex-end;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
 .arrowLeftIcon {
     position: relative;
     width: 24px;
@@ -74,7 +83,14 @@
     justify-content: space-between;
     color: var(--text-normal);
   }
-  .menuimageIcon,
+  .menuimageIcon {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border: 0px solid transparent;
+    border-radius: var(--br-9xs) ; 
+  }
   .priceChild {
     position: relative;
     width: 72px;
@@ -231,7 +247,6 @@
   }
   .div {
     background-color: var(--background-normal);
-    border-bottom: 1px solid var(--line-alternative);
     padding: var(--padding-5xl) var(--padding-base);
     gap: var(--gap-5xl);
   }
