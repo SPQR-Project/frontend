@@ -191,16 +191,20 @@ const MenuDetailPage = () => {
       console.log(check_cart);
       //localStorage.removeItem("cart");
       if (currentTempId !== 0) {
-        navigate();
+        navigate(`/cart_m/${restaurantId}/${branchId}/${tableNumber}/`);
       }
       navigate(-1);
     },
-    [navigate, currentTempId]
+    [navigate, currentTempId, restaurantId, branchId, tableNumber]
   );
 
-  const onArrowIconClick = useCallback(() => {
+  const onBackIconClick = useCallback(() => {
     navigate(-1); // Use -1 to go back to the previous page
   }, [navigate]);
+
+  const onCartIconClick = useCallback(() => {
+    navigate(`/cart_m/${restaurantId}/${branchId}/${tableNumber}/`);
+  }, [navigate, restaurantId, branchId, tableNumber]);
 
   if (!menuDetailData) {
     return <div>Loading...</div>;
@@ -211,10 +215,10 @@ const MenuDetailPage = () => {
       <div className={styles.gnbMobileParent}>
         <div className={styles.gnbSpace}></div>
         <div className={styles.gnbMobile}>
-          <button className={styles.icon} onClick={onArrowIconClick}>
+          <button className={styles.icon} onClick={onBackIconClick}>
             <img className={styles.arrowLeftIcon} alt="" src={arrowIcon} />
           </button>
-          <div className={styles.icon1}>
+          <div className={styles.icon1} onClick={onCartIconClick}>
             <img className={styles.arrowLeftIcon} alt="" src={cartIcon} />
           </div>
         </div>

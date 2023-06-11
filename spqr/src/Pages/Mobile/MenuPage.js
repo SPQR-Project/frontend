@@ -38,6 +38,9 @@ const MenuPage = () => {
     },
     [navigate, restaurantId, branchId, tableNumber]
   );
+  const onCartIconClick = useCallback(() => {
+    navigate(`/cart_m/${restaurantId}/${branchId}/${tableNumber}`);
+  }, [navigate, restaurantId, branchId, tableNumber]);
   console.log(menuData);
   if (!menuData) {
     return <div>Loading...</div>;
@@ -54,7 +57,7 @@ const MenuPage = () => {
           <b className={styles.label}>테이블 번호</b>
           <b className={styles.number}>{tableNumber}</b>
         </div>
-        <div className={styles.icon}>
+        <div className={styles.icon} onClick={() => onCartIconClick()}>
           <img className={styles.cartWhiteIcon} alt="" src={cartIcon} />
         </div>
       </div>
