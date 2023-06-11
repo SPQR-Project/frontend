@@ -14,6 +14,7 @@ const MenuDetailPage = () => {
   const [partialTotal, setPartialTotal] = useState(0);
   const [total, setTotal] = useState(0);
   const [quantity, setQuantity] = useState(1);
+
   const currentTempId = location.state ? location.state.tempId : 0;
   console.log(currentTempId);
   const {
@@ -75,15 +76,43 @@ const MenuDetailPage = () => {
             })),
           })
         );
+        if (currentTempId !== 0) {
+          const existingCart = JSON.parse(localStorage.getItem("cart") || "[]");
+          const cartItem = existingCart.find(
+            (item) => item.temp_id === currentTempId
+          );
+          if (cartItem) {
+            cartItem.option_menus.forEach((option) => {
+              const category =
+                modifiedData.option_categories[option.option_category_idx];
+              if (category) {
+                const menuOption = category.option_menus[option.option_idx];
+                if (menuOption) {
+                  menuOption.checked = true;
+                }
+              }
+            });
+          }
+        }
+
+        let newTotal = modifiedData.price;
+        modifiedData.option_categories.forEach((category) => {
+          category.option_menus.forEach((option) => {
+            if (option.checked) {
+              newTotal += option.price;
+            }
+          });
+        });
+
         setMenuDetailData(modifiedData);
-        setPartialTotal(modifiedData.price);
-        setTotal(modifiedData.price);
+        setPartialTotal(newTotal);
+        setTotal(newTotal * quantity);
       } catch (error) {
         console.log("Error fetching menu data:", error);
       }
     };
     fetchMenuDetailData();
-  }, [restaurantId, branchId, tableNumber, menuId]);
+  }, [restaurantId, branchId, tableNumber, menuId, quantity, currentTempId]);
 
   const onSubmitButtonClick = useCallback(
     (currentMenuData, currentQuantity) => {
@@ -94,7 +123,11 @@ const MenuDetailPage = () => {
 
       if (existingCart) {
         existingCart = JSON.parse(existingCart);
-        if (Array.isArray(existingCart) && existingCart.length > 0) {
+        if (
+          Array.isArray(existingCart) &&
+          existingCart.length > 0 &&
+          currentTempId === 0
+        ) {
           // Find the largest temp_id
           const maxTempId = Math.max(
             ...existingCart.map((item) => item.temp_id)
@@ -102,6 +135,9 @@ const MenuDetailPage = () => {
           // Set temp_id to be one more than the largest existing temp_id
           temp_id = maxTempId + 1;
         }
+      }
+      if (currentTempId !== 0) {
+        temp_id = currentTempId;
       }
 
       const newCart = [];
@@ -126,9 +162,8 @@ const MenuDetailPage = () => {
                 option_idx: optionIndex,
               }))
         );
-
         newCart.push({
-          temp_id: temp_id++,
+          temp_id: temp_id,
           menu_id: currentMenuData.id,
           menu_name: currentMenuData.name,
           menu_price: currentMenuData.price,
@@ -136,9 +171,16 @@ const MenuDetailPage = () => {
           option_menus: checkedOptions,
         });
       }
+      console.log(newCart);
 
       // Parse the existing data to convert it back to an object
       existingCart = existingCart ? existingCart : [];
+
+      if (currentTempId !== 0 && existingCart) {
+        existingCart = existingCart.filter(
+          (item) => item.temp_id !== currentTempId
+        );
+      }
 
       // Now let's add the new data to existing data
       let finalCart = [...existingCart, ...newCart];
@@ -148,10 +190,12 @@ const MenuDetailPage = () => {
       let check_cart = localStorage.getItem("cart");
       console.log(check_cart);
       //localStorage.removeItem("cart");
-
+      if (currentTempId !== 0) {
+        navigate();
+      }
       navigate(-1);
     },
-    [navigate]
+    [navigate, currentTempId]
   );
 
   const onArrowIconClick = useCallback(() => {

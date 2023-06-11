@@ -10,6 +10,7 @@ import WebLoginPage from "./Pages/Web/LoginPage";
 import WebOrderPage from "./Pages/Web/OrderPage";
 import MobileMenuPage from "./Pages/Mobile/MenuPage";
 import MobileMenuDetailPage from "./Pages/Mobile/MenuDetailPage";
+import MobileCartPage from "./Pages/Mobile/CartPage";
 
 function PageHandler() {
   const location = useLocation();
@@ -71,6 +72,10 @@ function App() {
         <Route
           path="/menu_m/:restaurant_id/:branch_id/:table_number/:menu_id"
           element={<MobileMenuDetailPage />}
+        />
+        <Route
+          path="/cart_m/:restaurant_id/:branch_id/:table_number"
+          element={<MobileCartPage />}
         />
       </Routes>
     </Router>
