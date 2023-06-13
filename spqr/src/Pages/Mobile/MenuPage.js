@@ -7,6 +7,7 @@ import cartIcon from "../../Assets/Images/cart-white.svg";
 const MenuPage = () => {
   const navigate = useNavigate();
   const [menuData, setMenuData] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(0);
 
   const {
     restaurant_id: restaurantId,
@@ -63,10 +64,15 @@ const MenuPage = () => {
       </div>
       <div className={styles.tabmenugroup}>
         <div className={styles.tabmenuitemPillParent}>
-          {menuData.map((menuCategory) => (
+          {menuData.map((menuCategory, index) => (
             <div
               key={menuCategory.category_name}
-              className={styles.tabmenuitemPill}
+              onClick={() => setSelectedCategory(index)} // Set state here
+              className={
+                selectedCategory === index
+                  ? styles.tabmenuitemPill
+                  : styles.tabmenuitemPill1
+              }
             >
               <b className={styles.label1}>{menuCategory.category_name}</b>
             </div>

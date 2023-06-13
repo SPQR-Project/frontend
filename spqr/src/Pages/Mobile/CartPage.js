@@ -46,6 +46,17 @@ const CartPage = () => {
     [currentOrdersData]
   );
 
+  const onModifyButtonClick = useCallback(
+    (temp_id, menu_id) => {
+      console.log(temp_id);
+      navigate(
+        `/menu_m/${restaurantId}/${branchId}/${tableNumber}/${menu_id}`,
+        { state: { temp_id } }
+      );
+    },
+    [navigate, restaurantId, branchId, tableNumber]
+  );
+
   const onSubmitButtonClick = useCallback(async () => {
     // Get the cart data from local storage
     const cartData = JSON.parse(localStorage.getItem("cart")) || [];
@@ -96,17 +107,6 @@ const CartPage = () => {
       }
     }
   }, [navigate, restaurantId, branchId, tableNumber]);
-
-  const onModifyButtonClick = useCallback(
-    (temp_id, menu_id) => {
-      console.log(temp_id);
-      navigate(
-        `/menu_m/${restaurantId}/${branchId}/${tableNumber}/${menu_id}`,
-        { state: { temp_id } }
-      );
-    },
-    [navigate, restaurantId, branchId, tableNumber]
-  );
 
   useEffect(() => {
     const fetchPastOrdersData = async () => {
