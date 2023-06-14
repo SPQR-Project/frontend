@@ -15,7 +15,7 @@
   height: calc(100vh - 69px);
 }
 
-.mobileContent{
+.content{
   align-self: stretch;
   display: flex;
   flex-direction: column;

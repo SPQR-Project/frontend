@@ -196,7 +196,7 @@ const CartPage = () => {
   // Render the component
   return (
     <div className={styles.mobile}>
-      <div className={styles.mobileContent}>
+      <div className={styles.content}>
         <div className={styles.headerSpace}></div>
         <div className={styles.header}>
           <div className={styles.icon}>
