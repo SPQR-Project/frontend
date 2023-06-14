@@ -233,9 +233,11 @@ const MenuDetailPage = () => {
             />
             <div className={styles.menuinfo1}>
               <b className={styles.label}>{menuDetailData.name}</b>
-              <div className={styles.description}>
-                {menuDetailData.description}
-              </div>
+              {menuDetailData.description && (
+                <div className={styles.description}>
+                  {menuDetailData.description}
+                </div>
+              )}
               <div className={styles.price}>
                 <b className={styles.label1}>가격</b>
                 <b className={styles.value}>

@@ -99,7 +99,9 @@ const MenuPage = () => {
                 />
                 <div className={styles.menuinfo}>
                   <b className={styles.name}>{menu.name}</b>
-                  <div className={styles.description}>{menu.description}</div>
+                  {menu.description && (
+                    <div className={styles.description}>{menu.description}</div>
+                  )}
                   <b className={styles.price}>
                     {menu.price.toLocaleString()}원
                   </b>
