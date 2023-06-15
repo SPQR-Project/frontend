@@ -19,7 +19,7 @@
   display: flex;
   align-self: stretch;
   flex-direction: row;
-  padding: var(--padding-base);
+  padding: var(--padding-base) var(--padding-5xs) var(--padding-base) var(--padding-base);
   justify-content: flex-start;
   color: var(--text-alternative-1);
 }
