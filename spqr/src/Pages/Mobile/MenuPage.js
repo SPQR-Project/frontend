@@ -11,8 +11,9 @@ const MenuPage = () => {
   // Initializing states
   const [menuData, setMenuData] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(0);
-  const menuCategoryRefs = useRef([]);
   const [isAutomaticScroll, setIsAutomaticScroll] = useState(false);
+  const menuCategoryRefs = useRef([]);
+  const categoryPillRefs = useRef([]);
 
   // Extracting params from URL
   const {
@@ -59,6 +60,15 @@ const MenuPage = () => {
     await smoothScrollTo(y);
     setIsAutomaticScroll(false);
     setSelectedCategory(index);
+    let temp_index = index;
+    if (index >= 1) {
+      temp_index = index - 1;
+    }
+    categoryPillRefs.current[temp_index].scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
   };
 
   /** Effect Hooks */
@@ -96,6 +106,14 @@ const MenuPage = () => {
 
       if (index !== -1) {
         setSelectedCategory(index);
+        let temp_index = index;
+        if (index >= 1) {
+          temp_index = index - 1;
+        }
+        categoryPillRefs.current[temp_index].scrollIntoView({
+          behavior: "instant",
+          inline: "center",
+        });
       }
     };
 
@@ -145,6 +163,7 @@ const MenuPage = () => {
                     ? styles.categoryPillSelected
                     : styles.categoryPill
                 }
+                ref={(el) => (categoryPillRefs.current[index] = el)}
               >
                 <div className={styles.menuCategoryLabel}>
                   {menuCategory.category_name}
