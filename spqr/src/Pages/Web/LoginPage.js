@@ -64,7 +64,7 @@ function LoginPage(props) {
               });
             } else if (isBranchUser) {
               navigate(`/order_w/${restaurantId}/${branchId}`, {
-                state: { isHQUser },
+                state: { isBranchUser },
               });
             }
           }
