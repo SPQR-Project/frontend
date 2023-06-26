@@ -13,13 +13,20 @@ import MobileMenuDetailPage from "./Pages/Mobile/MenuDetailPage";
 import MobileCartPage from "./Pages/Mobile/CartPage";
 
 function PageHandler() {
+  // Navigation and location utility from React Router
   const location = useLocation();
+
+  // Location variable assignments
   const { pathname, key } = location;
 
+  /** Effect Hooks */
+
+  // Effect to scroll to the top when the user first lands on the page
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [key]);
 
+  // Effect to change page titles and meta descriptions according to the routes
   useEffect(() => {
     let title = "";
     let metaDescription = "";
@@ -61,6 +68,7 @@ function PageHandler() {
   }, [pathname]);
 }
 
+// Routes for the App
 function App() {
   return (
     <Router>
@@ -79,7 +87,10 @@ function App() {
           element={<MobileCartPage />}
         />
         <Route path="/login_w" element={<WebLoginPage />} />
-        <Route path="/order_w" element={<WebOrderPage />} />
+        <Route
+          path="/order_w/:restaurant_id/:branch_id/"
+          element={<WebOrderPage />}
+        />
       </Routes>
     </Router>
   );

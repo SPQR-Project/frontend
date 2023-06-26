@@ -11,16 +11,22 @@ import styles from "./LoginPage.module.css";
 import logoImage from "../../Assets/Images/qr_logo.png";
 
 function LoginPage(props) {
+  // Navigation and location utility from React Router
+  const navigate = useNavigate();
+
+  // Initializing states
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  // Cognito variable assignments
   const userPoolId = process.env.REACT_APP_USER_POOL_ID;
   const clientId = process.env.REACT_APP_CLIENT_ID;
-  const navigate = useNavigate();
 
+  /** Event Handlers */
+
+  // Function to hangle logins
   const handleLogin = (event) => {
     event.preventDefault();
-    console.log("hello");
     const userPool = new CognitoUserPool({
       UserPoolId: userPoolId,
       ClientId: clientId,
@@ -41,19 +47,40 @@ function LoginPage(props) {
         const decodedToken = jwt_decode(result.getAccessToken().getJwtToken());
         const isHQUser =
           decodedToken["cognito:groups"].includes("headquarters");
-        navigate("/order_w", { state: { isHQUser } });
+        const isBranchUser = decodedToken["cognito:groups"].includes("branch");
+
+        user.getUserAttributes((err, attributes) => {
+          if (err) {
+            console.error(err);
+          } else {
+            const nameAttribute = attributes.find(
+              (attribute) => attribute.getName() === "name"
+            );
+            const identifier = nameAttribute ? nameAttribute.getValue() : null;
+            const [restaurantId, branchId] = identifier.split("/");
+            if (isHQUser) {
+              navigate(`/menu_w/${restaurantId}/${branchId}`, {
+                state: { isHQUser },
+              });
+            } else if (isBranchUser) {
+              navigate(`/order_w/${restaurantId}/${branchId}`, {
+                state: { isHQUser },
+              });
+            }
+          }
+        });
       },
       onFailure: (err) => {
         console.error(err);
-        // TODO: handle failed sign in, e.g. show error message to user
       },
     });
   };
 
+  // Render the component
   return (
     <div className={styles.loginPage}>
       <img src={logoImage} alt="Logo" className={styles.logoImage} />
-      <div className={styles.fieldWrapper}>
+      <form onSubmit={handleLogin} className={styles.fieldWrapper}>
         <p className={styles.inputLabel}>ID</p>
         <input
           type="text"
@@ -68,10 +95,10 @@ function LoginPage(props) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-      </div>
-      <button onClick={handleLogin} className={styles.styledButton}>
-        로그인
-      </button>
+        <button onClick={handleLogin} className={styles.styledButton}>
+          로그인
+        </button>
+      </form>
     </div>
   );
 }
