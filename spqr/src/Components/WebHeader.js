@@ -33,7 +33,6 @@ const WebHeader = ({ isHQUser, isBranchUser, restaurantId, branchId }) => {
   if (currentUser != null) {
     currentUser.getSession(function (err, session) {
       if (err) {
-        navigate("/login_w");
         alert(err);
         return;
       }
