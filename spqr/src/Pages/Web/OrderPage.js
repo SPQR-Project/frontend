@@ -43,8 +43,6 @@ const OrderPage = () => {
     setModalTablePopupOpen(false);
   }, []);
 
-  console.log(isHQUser);
-  console.log(isBranchUser);
   useEffect(() => {
     if (isHQUser) {
       navigate(`/menu_w/${restaurantId}/${branchId}`, {
