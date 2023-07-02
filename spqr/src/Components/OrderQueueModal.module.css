@@ -1,4 +1,5 @@
 .modal {
+  margin-top: 7.5%;
   position: relative;
   border-radius: var(--br-base);
   background-color: var(--background-normal);
@@ -9,9 +10,9 @@
   align-items: center;
   justify-content: center;
   gap: var(--gap-base);
-  max-width: 100%;
-  max-height: 100%;
-  overflow: auto;
+  max-width: 1000px;
+  max-height: 80%;
+  overflow-y: scroll;
   text-align: left;
   font-size: var(--headline-1);
   color: var(--text-strong);
@@ -23,6 +24,7 @@
 .modal::-webkit-scrollbar {
   display: none;
 }
+
 
 .modalHeader {
   align-self: stretch;
@@ -127,6 +129,10 @@
   align-self: stretch;
   gap: var(--gap-29xl);
   font-size: var(--label-3);
+  height: 200px;
+  overflow-y: scroll;
+  /*-ms-overflow-style: none; 
+  scrollbar-width: none; */
 }
 
 .orderContentColumn {
@@ -134,7 +140,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   display: flex;
-  gap: var(--gap-21xl);
+  gap: var(--gap-13xl);
   width: 100%;
 }
 
@@ -289,17 +295,4 @@
   color: var(--text-alternative-1);
   text-align: left;
 }
-
-
-.label16,
-.price25 {
-  position: relative;
-  line-height: 24px;
-}
-.price25 {
-  font-size: var(--label-1);
-  letter-spacing: 0.01em;
-  line-height: 28px;
-}
-
 
