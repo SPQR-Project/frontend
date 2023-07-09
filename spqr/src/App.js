@@ -49,6 +49,9 @@ function PageHandler() {
     } else if (mainPath === "order_w") {
       title = "Order";
       metaDescription = "This is the Web Order Page";
+    } else if (mainPath === "menu_w") {
+      title = "Menu";
+      metaDescription = "This is the Web Menu Page";
     } else {
       title = "SPQR";
       metaDescription = "";
