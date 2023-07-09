@@ -52,7 +52,7 @@
 .tabMenuItemActive {
   text-decoration: none;
   box-sizing: border-box;
-  width: 10px;
+  width: 120px;
   padding: var(--padding-base) var(--padding-21xl);
   align-items: center;
   justify-content: center;
