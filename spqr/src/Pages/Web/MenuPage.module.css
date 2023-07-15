@@ -30,7 +30,7 @@ html::before {
   flex-direction: column;
   align-items: center;
   overflow-y: scroll;
-  padding: var(--padding-13xl);
+  padding: var(--padding-5xl) var(--padding-13xl) var(--padding-13xl);
   box-sizing: border-box;
   gap: var(--gap-base);
   font-size: var(--headline-1);

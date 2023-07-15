@@ -29,7 +29,7 @@ html::before {
   align-items: center;
   justify-content: flex-start;
   align-self: stretch;
-  padding: var(--padding-13xl);
+  padding: var(--padding-5xl) var(--padding-13xl) var(--padding-13xl);
 }
 
 .content{
