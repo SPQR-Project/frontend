@@ -1,8 +1,8 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import WebHeader from "../../Components/WebHeader";
-import { decryptUrlParams } from "../../utils/encryption";
+import { encryptUrlParams, decryptUrlParams } from "../../utils/encryption";
 import styles from "./MenuPage.module.css";
 import deleteIcon from "../../Assets/Images/delete.svg";
 import editIcon from "../../Assets/Images/edit.svg";
@@ -58,11 +58,52 @@ const MenuPage = () => {
           body: JSON.stringify(data),
         }
       );
+      console.log(response);
       setEventCounter(eventCounter + 1);
     } catch (error) {
       console.log(error);
     }
   };
+
+  const onDeleteButtonClick = async (id, type) => {
+    try {
+      const response = await fetch(
+        `${serverAddress}/menu_w/${restaurantId}/${branchId}/${type}/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
+      console.log(response);
+      setEventCounter(eventCounter + 1);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const onMenuEditButtonClick = useCallback(
+    (id) => {
+      navigate(
+        `/menu_w/${encryptUrlParams(restaurantId)}/${encryptUrlParams(
+          branchId
+        )}/${encryptUrlParams(id)}/edit`,
+        {
+          state: { isHQUser, isBranchUser },
+        }
+      );
+    },
+    [navigate, isHQUser, isBranchUser, restaurantId, branchId]
+  );
+
+  const onDisplayOrderButtonClick = useCallback(() => {
+    navigate(
+      `/menu_w/${encryptUrlParams(restaurantId)}/${encryptUrlParams(
+        branchId
+      )}/edit`,
+      {
+        state: { isHQUser, isBranchUser },
+      }
+    );
+  }, [navigate, isHQUser, isBranchUser, restaurantId, branchId]);
 
   /** Effect Hooks */
 
@@ -82,6 +123,7 @@ const MenuPage = () => {
         );
         const jsonData = await response.json();
         setMenuData(jsonData.data.menu);
+        console.log(jsonData.data.menu);
       } catch (error) {
         console.log("Error fetching menu data:", error);
       }
@@ -110,7 +152,10 @@ const MenuPage = () => {
               <h1 className={styles.titleLabel}>현재 메뉴</h1>
             </div>
             {isHQUser && (
-              <button className={styles.buttonWrapper}>
+              <button
+                className={styles.buttonWrapper}
+                onClick={onDisplayOrderButtonClick}
+              >
                 <div className={styles.buttonLabel}>메뉴 순서 변경</div>
               </button>
             )}
@@ -126,7 +171,16 @@ const MenuPage = () => {
                 </h2>
                 {isHQUser && (
                   <button className={styles.iconWrapper}>
-                    <div className={styles.icon}>
+                    <div
+                      className={styles.icon}
+                      onClick={() => {
+                        const confirmMessage =
+                          "메뉴 구분을 정말 삭제하시겠습니까?";
+                        if (window.confirm(confirmMessage)) {
+                          onDeleteButtonClick(menuCategory.id, 1);
+                        }
+                      }}
+                    >
                       <img alt="" src={deleteIcon} />
                     </div>
                   </button>
@@ -175,29 +229,34 @@ const MenuPage = () => {
                         }
                       >
                         {isHQUser && (
-                          <button className={styles.iconWrapper}>
+                          <button
+                            className={styles.iconWrapper}
+                            onClick={() => {
+                              onMenuEditButtonClick(menuItem.id);
+                            }}
+                          >
                             <div className={styles.icon}>
                               <img alt="" src={editIcon} />
                             </div>
                           </button>
                         )}
                         {isBranchUser && (
-                          <button className={styles.iconWrapper}>
-                            <div
-                              className={styles.icon}
-                              onClick={() => {
-                                const confirmMessage = menuItem.menu_status
-                                  ? "메뉴를 중지하시겠습니까?"
-                                  : "메뉴를 재개하시겠습니까?";
+                          <button
+                            className={styles.iconWrapper}
+                            onClick={() => {
+                              const confirmMessage = menuItem.menu_status
+                                ? "메뉴를 중지하시겠습니까?"
+                                : "메뉴를 재개하시겠습니까?";
 
-                                if (window.confirm(confirmMessage)) {
-                                  onStatusButtonClick(
-                                    menuItem.id,
-                                    menuItem.menu_status
-                                  );
-                                }
-                              }}
-                            >
+                              if (window.confirm(confirmMessage)) {
+                                onStatusButtonClick(
+                                  menuItem.id,
+                                  menuItem.menu_status
+                                );
+                              }
+                            }}
+                          >
+                            <div className={styles.icon}>
                               <img
                                 alt=""
                                 src={
@@ -208,7 +267,16 @@ const MenuPage = () => {
                           </button>
                         )}
                         {isHQUser && (
-                          <button className={styles.iconWrapper}>
+                          <button
+                            className={styles.iconWrapper}
+                            onClick={() => {
+                              const confirmMessage =
+                                "메뉴를 정말 삭제하시겠습니까?";
+                              if (window.confirm(confirmMessage)) {
+                                onDeleteButtonClick(menuItem.id, 0);
+                              }
+                            }}
+                          >
                             <div className={styles.icon}>
                               <img alt="" src={deleteIcon} />
                             </div>
