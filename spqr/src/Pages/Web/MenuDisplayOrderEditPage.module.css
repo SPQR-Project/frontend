@@ -111,6 +111,19 @@ html::before {
   white-space: nowrap;
 }
 
+.dragWrapper {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  gap: var(--gap-base);
+  font-size: var(--headline-1);
+  color: var(--text-strong);
+}
+
 .layout{
   display: flex;
   justify-content: flex-start;
@@ -165,6 +178,7 @@ html::before {
   align-items: center;
   justify-content: center;
   opacity: 0.6;
+  cursor: 'grab';
 }
 
 .icon {
@@ -184,12 +198,13 @@ html::before {
 }
 
 .menuRow {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   gap: var(--gap-base);
   align-self: stretch;
   align-items: center;
+  overflow-x: scroll;
 }
 
 .menuCard {
@@ -199,11 +214,12 @@ html::before {
   background-color: var(--background-normal);
   border: 1px solid var(--line-normal);
   box-sizing: border-box;
-  height: 100%;
+  height: 200px;
   flex-direction: column;
   padding: var(--padding-base) var(--padding-base) var(--padding-5xl);
   align-items: flex-start;
   gap: var(--gap-base);
+  width: 350px;
 }
 
 .menuCardLayout {
