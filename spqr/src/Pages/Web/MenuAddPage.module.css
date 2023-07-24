@@ -20,7 +20,7 @@ html::before {
   text-align: left;
   font-size: var(--label-1);
   color: var(--white);
-  font-family: var(--label-1);
+  font-family: var(--font-regular);
 }
 
 .contentWrapper {
@@ -448,9 +448,10 @@ html::before {
   font-size: var(--label-1);
   letter-spacing: 0.01em;
   line-height: 28px;
-  font-family: var(--label-1);
-  color: var(--white);
+  font-family: var(--font-regular);
+  color: var(--white-white);
   text-align: left;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 960px) {
