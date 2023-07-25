@@ -415,7 +415,7 @@ html::before {
 .optionCardAdd {
   cursor: pointer;
   border: 1px solid var(--line-strong);
-  padding: 0;
+  padding: var(--gap-xs);
   background-color: var(--secondary-normal);
   border-radius: var(--br-5xs);
   box-sizing: border-box;
