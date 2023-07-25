@@ -1,4 +1,15 @@
-.loginPage {
+html::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: var(--background-alternative); 
+}
+
+.web {
     background-color: var(--background-normal);
     border-radius: var(--br-5xl);
     display: flex;
