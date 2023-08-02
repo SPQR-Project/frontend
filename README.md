@@ -139,7 +139,7 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
 
 <br>
 
-## 기술 스택 (Tech Stack) <a name="techstack"></a>
+## Tech Stack <a name="techstack"></a>
 
 ### **Backend** <a name="backend"></a>
 
@@ -161,7 +161,8 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
 </table>
 
 ### Description of Tables
-* schema:\
+
+qr_mondrian_schema:\
 &nbsp; - **restaurants**: contains basic information about different restaurants\
 &nbsp; - **branches**: contains information about the various branches of each restaurant\
 &nbsp; - **branches_menu_status**: contains the status of menus at different branches\
@@ -173,9 +174,6 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
 &nbsp; - **sub_orders**: contains sub orders that make up a order\
 &nbsp; - **order_items**: contains information about the items included in each sub order\
 &nbsp; - **order_item_options**: containts the option items chosen for each order item
-
-* Firebase Cloud Storage:\
-&nbsp; - FOLDER(SERVICE_NUMBER): 군번 별 폴더를 통해 잔반 식판 사진 모음
 
 ### List of Libraries in Use
 
