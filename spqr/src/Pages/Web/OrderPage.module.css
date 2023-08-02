@@ -152,7 +152,7 @@ html::before {
   height: 180px;
   align-self: stretch;
   gap: var(--gap-base);
-  overflow-x: hidden;
+  overflow-x: scroll;
 }
 
 .tableContentTitle {
