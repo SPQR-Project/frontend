@@ -1,83 +1,51 @@
-![Logo](./README_Assets/logo.jpg)
+<div align="center">
+  <img src="./README_Assets/logo.jpg" alt="Logo" width="600" />
+</div>
 
-<H3 align="center"> <i> 잔반 줄이기, 이제 즐기세요 </i></H3>
+<H3 align="center"> <i> An Easy-to-use Scan & Order System for Restaruants  </i></H3>
 <br>
-<br>
 
-<p align="center">
-	<a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/search?l=TSX&type=code"><img alt="GitHub language count" src="https://img.shields.io/github/languages/count/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS"></a>
-	<a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS?color=success"></a>
-	<a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS"></a>
-	<a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/license.md"><img alt="GitHub license" src="https://img.shields.io/github/license/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS"></a>
-	
-<h2 align="center">프로젝트 설명 자료</h2>
-
-<table>
-	<tr>
-		<td width="50%">
-			<a href="https://www.youtube.com/watch?v=qXpAsFlGKac&ab_channel=%EA%B9%80%EC%84%9D%ED%98%84"><img src="./asset/readme/movie_final.png"></a>
-		</td>
-		<td width="50%">
-			<a href="./asset/readme/MealScan PPT.pdf"><img src="./asset/readme/ppt_show.png"></a>
-		</td>
-	</tr>
-	<tr>
-		<td align="center">
-			<a href="https://www.youtube.com/watch?v=qXpAsFlGKac&ab_channel=%EA%B9%80%EC%84%9D%ED%98%84">프로젝트 소개 및 시연영상</a>
-		</td>
-		<td align="center">
-			<a href="./asset/readme/MealScan PPT.pdf">프로젝트 소개 및 발표자료</a>
-		</td>
-	</tr>
-</table>
+## Table of Contents
+1. [Description](#introduction)
+2. [Features](#features)
+3. [Design](#design)
+4. [Tech Stack](#techstack)
+    1. [Cloud](#cloud)
+    2. [Backend](#backend)
+    3. [Frontend](#frontend)
 
 <br>
 
-## 목차(Table of Contents)
-1. [프로젝트 소개](#introduction)
-2. [앱 기능 세부 설명](#detailedexp)
-3. [기대효과](#goals)
-4. [발전방향](#forward)
-5. [기술스택](#techstack)
-    1. [Backend](#backend)
-    2. [Frontend](#frontend)
-    3. [IOT + Image Processing](#IOT)
-    4. [3D Modeling & Printing](#3d)
-    5. [Communications/Project Management](#comm)
-6. [안드로이드 필수 조건 안내](#prereqs)
-7. [설치 안내](#install)
-8. [프로젝트 사용법](#start)
-9. [팀 정보](#team)
-10. [저작권 및 사용권 정보](#license)
+## Description <a name="introduction"></a>
+"QR Mondrian" is a QR ordering system that boosts the dining experience and simplifies restaurant operations. Using QR code technology, customers can view menus and place orders directly from their phones.
 
-<br>
+For customers, this system removes the usual wait for a server to provide the menu or take an order. They just scan a QR code, view the menu on their phones, and place their orders right away, saving time and increasing convenience.
 
-## 프로젝트 소개 <a name="introduction"></a>
-밀스캔 (MealScan)은 식판 이미지를 이용한 장병들의 잔반 데이터 분석 및 이를 기반으로 한 잔반 챌린지 이벤트를 통해 군 내 잔반 문제를 해결하기 위하여 만들어진 모바일 애플리케이션입니다. 처리비용만 [연 142억원](http://www.urinews.org/120112), 군 음식물 쓰레기가 [역대 최대치](https://www.edaily.co.kr/news/read?newsId=02223846625936528&mediaCodeNo=257)를 경신한 지금, 기존 방식보다 더 편리하고 재치있는 방식으로 잔반 문제 해결에 한 발짝 더 다가가고자 합니다. 
+For restaurant owners, "QR Mondrian" brings a new level of efficiency. Owners can make real-time updates to menus and immediately stop orders when a dish runs out. This effective order management helps reduce errors and can also help decrease operational costs.
 
-밀스캔은 세가지 Task로 이루어져 있습니다.
-1. 📷 **Scan**\
-식사를 마친 후 밀스캔 IoT 시스템에 식판 및 본인식별 QR을 스캔해주세요. 밀스캔이 전우님의 식판 이미지를 분석하여 해당 식판의 전체 잔반 클리어률과 반찬별 클리어률을 계산합니다.
-
-2. 🥊 **Challenge**\
-서비스에 가입하실 때 기입하신 부대고유코드에 따라 전우님이 참가할 수 있는 잔반 챌린지를 제시합니다. 챌린지에 참가하게 되면 챌린지 기간동안 누적된 전우님의 잔반 클리어률이 순위에 반영되고, 최종 우승 시 지휘관이 설정한 포상을 획득하게 됩니다. 챌린지 경쟁자는 개인별, 중대별, 대대별 등 부대 상황과 지휘관 설정에 따라 달라집니다.
-
-2. 📊 **Explore**\
-Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게 시각화되어 확인하실 수 있습니다. 또한 반찬별 클리어률을 바탕으로 매 끼니별 배식 추천을 제공하여 배식받을 때 (또는 자율배식 할 때) 필요 이상을 받지 않고, 적게 배식받을 메뉴를 추천합니다. 밀스캔 데이터는 국방부와도 공유되어 영양사분들이 더 효율적인 식단을 짤 수 있게 합니다.
+In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution, redefining the dining and ordering process for customers and restaurant owners alike.
 
 
-### **전체적인 서비스 플로우**
+### **User Flow**
 <table>
     <tr>
-        <td width="100%">
+        <td width="50%">
             <img src="./asset/readme/service_flow.png">
+        </td>
+	<td width="50%">
+            <img src="./asset/readme/service_flow.png">
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <a>User-side</a>
         </td>
     </tr>
 </table>
 
 <br>
 
-## 앱 기능 세부 설명 <a name="detailedexp"></a>
+## Features <a name="features"></a>
 
 
 
