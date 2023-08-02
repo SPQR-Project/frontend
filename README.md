@@ -194,9 +194,9 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
 
 |Used Library|Purpose 
 |:---:|:---:|
-|[mui/material](https://mui.com/)| Used to create UI elements like dropdown lists |
-|[amazon-cognito-identity-js](https://github.com/amazon-archives/amazon-cognito-identity-js)| Connects to AWS Cognito for user login |
-|[crypto-js](https://github.com/brix/crypto-js)| Used to encode and decode URLs for additional security |
+|[mui/material](https://www.npmjs.com/package/@mui/material)| Used to create UI elements like dropdown lists |
+|[amazon-cognito-identity-js](https://www.npmjs.com/package/amazon-cognito-identity-js)| Connects to AWS Cognito for user login |
+|[crypto-js](https://www.npmjs.com/package/crypto-js)| Used to encode and decode URLs for additional security |
 |[jwt-decode](https://www.npmjs.com/package/jwt-decode)| Used for decode JWT tokens for handling user login |
 |[react-beautiful-dnd](https://www.npmjs.com/package/react-beautiful-dnd)| Used to implement drag and drop functionality |
 
