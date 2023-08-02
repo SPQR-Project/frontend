@@ -1,4 +1,4 @@
-![Logo](./asset/README_ASSETS/logo.jpg)
+![Logo](./asset/README_Assets/logo.jpg)
 
 <H3 align="center"> <i> 잔반 줄이기, 이제 즐기세요 </i></H3>
 <br>
