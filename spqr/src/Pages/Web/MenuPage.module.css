@@ -280,6 +280,10 @@ html::before {
   overflow-x: scroll;
 }
 
+.menuInfoLayout::-webkit-scrollbar {
+  display: none;
+}
+
 .menuInfoLayoutInactive {
   display: flex;
   justify-content: flex-start;
@@ -290,6 +294,11 @@ html::before {
   font-size: var(--title-2);
   color: var(--text-alternative-2);
   overflow-x: scroll;
+}
+
+
+.menuInfoLayoutInactive::-webkit-scrollbar {
+  display: none;
 }
 
 .menuImage {
