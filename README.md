@@ -161,8 +161,6 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
     </tr>
 </table>
 
-#### Backend Dependencies 및 Collection 분류는 [App readme](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/APP(Android)/README.md)에서 확인하세요.
-
 <br>
 
 ### **Frontend** <a name="frontend"></a>
@@ -199,7 +197,5 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
 |[crypto-js](https://www.npmjs.com/package/crypto-js)| Used to encode and decode URLs for additional security |
 |[jwt-decode](https://www.npmjs.com/package/jwt-decode)| Used for decode JWT tokens for handling user login |
 |[react-beautiful-dnd](https://www.npmjs.com/package/react-beautiful-dnd)| Used to implement drag and drop functionality |
-
-<br>
 
 <br>
