@@ -277,7 +277,7 @@ html::before {
   flex-direction: row;
   align-items: flex-start;
   gap: var(--gap-2xl);
-  overflow-x: hidden;
+  overflow-x: scroll;
 }
 
 .menuInfoLayoutInactive {
