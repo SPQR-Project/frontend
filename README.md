@@ -177,7 +177,7 @@ qr_mondrian_schema:\
 
 ### List of Libraries in Use
 
-|Used Library|Purpose 
+|Library|Usage 
 |:---:|:---:|
 |[express](https://www.npmjs.com/package/express)| Application framework for building RESTful APIs  |
 |[@aws-sdk/client-s3](https://www.npmjs.com/package/aws-sdk)| AWS sdk for accessing S3 buckets|
@@ -212,7 +212,7 @@ qr_mondrian_schema:\
 
 ### List of Libraries in Use
 
-|Used Library|Purpose 
+|Library|Usage 
 |:---:|:---:|
 |[@mui/material](https://www.npmjs.com/package/@mui/material)| Used to create UI elements like dropdown lists |
 |[amazon-cognito-identity-js](https://www.npmjs.com/package/amazon-cognito-identity-js)| Connects to AWS Cognito for user login |
