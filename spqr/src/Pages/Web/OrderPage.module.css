@@ -142,7 +142,6 @@ html::before {
   justify-content: flex-start;
   gap: var(--gap-5xl);
   cursor: pointer;
-  overflow-x: scroll;
 }
 
 .tableContentWrapper {
