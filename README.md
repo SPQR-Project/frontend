@@ -13,7 +13,6 @@
     1. [Cloud](#cloud)
     2. [Backend](#backend)
     3. [Frontend](#frontend)
-
 <br>
 ## Description <a name="introduction"></a>
 "QR Mondrian" is a QR ordering system that boosts the dining experience and simplifies restaurant operations. Using QR code technology, customers can view menus and place orders directly from their phones.
