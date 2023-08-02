@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets_readme/logo.jpg" alt="Logo" width="600" />
+  <img src="./assets/readme/logos/main_logo.jpg" alt="Logo" width="600" />
 </div>
 
 <H3 align="center"> <i> An Easy-to-use Scan & Order System for Restaruants  </i></H3>
@@ -14,6 +14,7 @@
     2. [Backend](#backend)
     3. [Frontend](#frontend)
 <br>
+
 ## Description <a name="introduction"></a>
 "QR Mondrian" is a QR ordering system that boosts the dining experience and simplifies restaurant operations. Using QR code technology, customers can view menus and place orders directly from their phones.
 
@@ -28,10 +29,10 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
 <table>
     <tr>
         <td width="50%">
-            <img src="./asset/readme/service_flow.png">
+            <img src="./assets/readme/service_flow.png">
         </td>
 	<td width="50%">
-            <img src="./asset/readme/service_flow.png">
+            <img src="./assets/readme/service_flow.png">
         </td>
     </tr>
     <tr>
@@ -142,38 +143,63 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
 
 ### **Backend** <a name="backend"></a>
 
-|Firebase|
+|Node.js|
 |:---:|
-|<a href="https://firebase.google.com/"><img src="asset/firebase.jpg" height="70px"></a>|
+|<a href="https://nodejs.org/en"><img src="./assets/readme/logos/nodejs_logo.png" height="60px"></a>|
 
 <table>
     <tr>
         <td width="100%">
-            <img src="asset/fbstructure.png">
+            <img src="./assets/readme/diagrams/database_structure.png">
         </td>
     </tr>
     <tr>
         <td align="center">
-            <a>Firebase Structure</a>
+            <a href="https://dbdiagram.io/d/64ca9d2302bd1c4a5e2395dd">Database Structure</a>
         </td>
     </tr>
 </table>
 
+### Description of Tables
+* schema:\
+&nbsp; - **restaurants**: contains basic information about different restaurants\
+&nbsp; - **branches**: contains information about the various branches of each restaurant\
+&nbsp; - **branches_menu_status**: contains the status of menus at different branches\
+&nbsp; - **main_categories**: contains the main categories of menus in each restaurant\
+&nbsp; - **main_menus**: contains the main menus under each category for the restaurants\
+&nbsp; - **option_categories**: contains the various option categories under each main menu item\
+&nbsp; - **option_menus**: contains the various option menus under each option category\
+&nbsp; - **orders**: contains the details of customer orders at each branch\
+&nbsp; - **sub_orders**: contains sub orders that make up a order\
+&nbsp; - **order_items**: contains information about the items included in each sub order\
+&nbsp; - **order_item_options**: containts the option items chosen for each order item
+
+* Firebase Cloud Storage:\
+&nbsp; - FOLDER(SERVICE_NUMBER): 군번 별 폴더를 통해 잔반 식판 사진 모음
+
+### List of Libraries in Use
+
+|Used Library|Purpose 
+|:---:|:---:|
+|[express](https://www.npmjs.com/package/express)| Application framework for building RESTful APIs  |
+|[@aws-sdk/client-s3](https://www.npmjs.com/package/aws-sdk)| AWS sdk for accessing S3 buckets|
+|[multer-s3](https://www.npmjs.com/package/multer)| Middleware to handle form-data when uploading images |
+|[sequelize](https://www.npmjs.com/package/sequelize)| ORM tool to handle database transactions |
 <br>
 
 ### **Frontend** <a name="frontend"></a>
 
 |React|
 |:---:|
-|<a href="https://react.dev/"><img src="./assets_readme/reactjs.png" height="60px"></a>|
+|<a href="https://react.dev/"><img src="./assets/readme/logos/reactjs_logo.png" height="60px"></a>|
 
 <table>
     <tr>
         <td width="33%">
-            <img src="./assets_readme/userflow_customer.jpg">
+            <img src="./assets/readme/diagrams/userflow_customer.jpg">
         </td>
         <td width="67%">
-            <img src="./assets_readme/userflow_restaurant.jpg">
+            <img src="./assets/readme/diagrams/userflow_restaurant.jpg">
         </td>
     </tr>
     <tr>
@@ -190,10 +216,9 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
 
 |Used Library|Purpose 
 |:---:|:---:|
-|[mui/material](https://www.npmjs.com/package/@mui/material)| Used to create UI elements like dropdown lists |
+|[@mui/material](https://www.npmjs.com/package/@mui/material)| Used to create UI elements like dropdown lists |
 |[amazon-cognito-identity-js](https://www.npmjs.com/package/amazon-cognito-identity-js)| Connects to AWS Cognito for user login |
 |[crypto-js](https://www.npmjs.com/package/crypto-js)| Used to encode and decode URLs for additional security |
 |[jwt-decode](https://www.npmjs.com/package/jwt-decode)| Used for decode JWT tokens for handling user login |
 |[react-beautiful-dnd](https://www.npmjs.com/package/react-beautiful-dnd)| Used to implement drag and drop functionality |
-
 <br>
