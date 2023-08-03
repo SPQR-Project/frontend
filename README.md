@@ -163,17 +163,17 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
 ### Description of Tables
 
 qr_mondrian_schema:\
-&nbsp; - **restaurants**: contains basic information about different restaurants\
-&nbsp; - **branches**: contains information about the various branches of each restaurant\
-&nbsp; - **branches_menu_status**: contains the status of menus at different branches\
-&nbsp; - **main_categories**: contains the main categories of menus in each restaurant\
-&nbsp; - **main_menus**: contains the main menus under each category for the restaurants\
-&nbsp; - **option_categories**: contains the various option categories under each main menu item\
-&nbsp; - **option_menus**: contains the various option menus under each option category\
-&nbsp; - **orders**: contains the details of customer orders at each branch\
-&nbsp; - **sub_orders**: contains sub orders that make up a order\
-&nbsp; - **order_items**: contains information about the items included in each sub order\
-&nbsp; - **order_item_options**: containts the option items chosen for each order item
+&nbsp; - **restaurants**: basic information about different restaurants\
+&nbsp; - **branches**: information about the various branches of each restaurant\
+&nbsp; - **branches_menu_status**: the status of menus at different branches\
+&nbsp; - **main_categories**: the main categories of menus in each restaurant\
+&nbsp; - **main_menus**: the main menus under each category for the restaurants\
+&nbsp; - **option_categories**: the various option categories under each main menu item\
+&nbsp; - **option_menus**: the various option menus under each option category\
+&nbsp; - **orders**: the details of customer orders at each branch\
+&nbsp; - **sub_orders**: sub orders that make up a order\
+&nbsp; - **order_items**: information about the items included in each sub order\
+&nbsp; - **order_item_options**: the option items chosen for each order item
 
 ### List of Libraries in Use
 
