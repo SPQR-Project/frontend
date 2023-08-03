@@ -31,59 +31,79 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
 
 ### Mobile
 <table>
-        <tbody>
-		<tr>
-			<td colspan=2>
-				<br>
-				<b>Mobile Menu Page</b><br>
-				<br>
-			</td>
-		</tr>
-		<tr>
-            <td rowspan="1"><div align="center"><a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/gifs/mobile_menu_page.gif" src="./assets/readme/gifs/mobile_menu_page.gif" width="60%" height="60%"></a></div></td>
-            <td width="40%"> Customers can effortlessly check out menu offerings with a scroll bar for seamless navigation  </td>
+    <tbody>
+        <tr>
+            <td>
+                <b>Mobile Menu Page</b>
+                <br>
+            </td>
         </tr>
-   </tbody>
+        <tr>
+            <td rowspan="1">
+                <div align="center">
+                    <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/gifs/mobile_menu_page.gif">
+                        <img src="./assets/readme/gifs/mobile_menu_page.gif" width="35%" height="10%">
+                    </a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                On the Menu page, customers can easily check out menu offerings with a scroll bar for seamless navigation  
+            </td>
+        </tr>
+    </tbody>
 </table>
 
 <table>
-        <tbody>
-		<tr>
-			<td colspan=2>
-				<br>
-				<b> 너 자신을 알라: 잔반 현황 및 식습관 파악하세요. </b><br>
-				<br>
-			</td>
-		</tr>
-		<tr>
-            <td rowspan="2"><div align="center"><a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/asset/readme/explore.gif"><img src="./asset/readme/explore.gif" width="90%" height="90%"></a></div></td>
-            <td width="33%">끼니별 배식량 추천</td>
+    <tbody>
+        <tr>
+            <td>
+                <b>Mobile Menu Details Page</b>
+                <br>
+            </td>
         </tr>
         <tr>
-            <td>다양한 차트 + 애니메이션을 이용한 데이터 시각화 </td>
+            <td rowspan="1">
+                <div align="center">
+                    <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/gifs/mobile_menu_details_page.gif">
+                        <img src="./assets/readme/gifs/mobile_menu_details_page.gif" width="35%" height="10%">
+                    </a>
+                </div>
+            </td>
         </tr>
-   </tbody>
+        <tr>
+            <td> 
+                On the Menu Details page, customers can view and select option items, select the quantity for each menu item, and add the menu item to the cart.
+            </td>
+        </tr>
+    </tbody>
 </table>
 
 <table>
-        <tbody>
-		<tr>
-			<td colspan=2>
-				<br>
-				<b> ➕ 내 식판 (흑)역사 불러오기, 잔반앨범  </b><br>
-				<br>
-			</td>
-		</tr>
-		<tr>
-            <td rowspan="2"><div align="center"><a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/asset/readme/album.gif"><img src="./asset/readme/album.gif" width="90%" height="90%"></a></div></td>
-            <td width="33%">스캔한 식판 사진 모두 조회 가능</td>
+    <tbody>
+        <tr>
+            <td>
+                <b>Mobile Cart Page</b>
+                <br>
+            </td>
         </tr>
         <tr>
-            <td>각 식판 사진별 잔반 클리어률 확인하여 밀스캔 알고리즘의 합리성 확인 </td>
+            <td rowspan="1">
+                <div align="center">
+                    <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/gifs/mobile_cart_page.gif">
+                        <img src="./assets/readme/gifs/mobile_cart_page.gif" width="35%" height="10%">
+                    </a>
+                </div>
+            </td>
         </tr>
-   </tbody>
+        <tr>
+            <td> 
+                On the Cart Page, customers can edit menu item details, modify quantities, delete items, review past orders, and finally, submit their current order.
+            </td>
+        </tr>
+    </tbody>
 </table>
-
 <br>
 
 ## Tech Stack <a name="techstack"></a>
