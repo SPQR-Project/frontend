@@ -99,7 +99,7 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
         </tr>
         <tr>
             <td> 
-                On the Cart Page, customers can edit menu item details, modify quantities, delete items, review past orders, and finally, submit their current order.
+                On the Cart Page, customers can edit menu item details, modify quantities, delete items, review past orders, and finally submit their current order.
             </td>
         </tr>
     </tbody>
