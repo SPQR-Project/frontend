@@ -30,7 +30,7 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
 
 
 ### Mobile
-<table>
+<table width="600px">
     <tbody>
         <tr>
             <td>
@@ -40,9 +40,9 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
         </tr>
         <tr>
             <td rowspan="1">
-                <div align="center">
+                <div align="center" width = "50px">
                     <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/gifs/mobile_menu_page.gif">
-                        <img src="./assets/readme/gifs/mobile_menu_page.gif" width="200px">
+                        <img src="./assets/readme/gifs/mobile_menu_page.gif" width = "600px">
                     </a>
                 </div>
             </td>
@@ -55,7 +55,7 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
     </tbody>
 </table>
 
-<table>
+<table width="600px">
     <tbody>
         <tr>
             <td>
@@ -65,9 +65,9 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
         </tr>
         <tr>
             <td rowspan="1">
-                <div align="center">
+               <div align="center">
                     <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/gifs/mobile_menu_details_page.gif">
-                        <img src="./assets/readme/gifs/mobile_menu_details_page.gif" width="200px">
+                        <img src="./assets/readme/gifs/mobile_menu_details_page.gif"  width = "600px">
                     </a>
                 </div>
             </td>
@@ -80,7 +80,7 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
     </tbody>
 </table>
 
-<table>
+<table width="600px">
     <tbody>
         <tr>
             <td>
@@ -92,7 +92,7 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
             <td rowspan="1">
                 <div align="center">
                     <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/gifs/mobile_cart_page.gif">
-                        <img src="./assets/readme/gifs/mobile_cart_page.gif" width="200px">
+                        <img src="./assets/readme/gifs/mobile_cart_page.gif"  width = "600px">
                     </a>
                 </div>
             </td>
@@ -112,7 +112,7 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
 
 |Node.js|
 |:---:|
-|<a href="https://nodejs.org/en"><img src="./assets/readme/logos/nodejs_logo.png" height="60px"></a>|
+|<a href="https://nodejs.org/en"><img src="./assets/readme/logos/nodejs_logo.png" width = "600px"></a>|
 
 <table>
     <tr>
