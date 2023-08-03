@@ -23,78 +23,25 @@ For customers, this system removes the usual wait for a server to provide the me
 For restaurant owners, "QR Mondrian" brings a new level of efficiency. Owners can make real-time updates to menus and immediately stop orders when a dish runs out. This effective order management helps reduce errors and can also help decrease operational costs.
 
 In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution, redefining the dining and ordering process for customers and restaurant owners alike.
-
-
-### **User Flow**
-<table>
-    <tr>
-        <td width="50%">
-            <img src="./assets/readme/service_flow.png">
-        </td>
-	<td width="50%">
-            <img src="./assets/readme/service_flow.png">
-        </td>
-    </tr>
-    <tr>
-        <td align="center">
-            <a>User-side</a>
-        </td>
-    </tr>
-</table>
-
 <br>
 
 ## Features <a name="features"></a>
 
 
 
-
+### Mobile
 <table>
         <tbody>
 		<tr>
 			<td colspan=2>
 				<br>
-				<b>설문조사는 그만! 이제 스캔하세요.</b><br>
+				<b>Mobile Menu Page</b><br>
 				<br>
 			</td>
 		</tr>
 		<tr>
-            <td rowspan="1"><div align="center"><a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/asset/readme/init.gif"><img src="./asset/readme//init.gif" width="60%" height="60%"></a></div></td>
-            <td width="33%"> 1. (간부) 식사시간 전 initData 생성용 정량 배식된 식판 스캔 </td>
-        </tr>
-        <tr>
-            <td rowspan="1"><div align="center"><a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/asset/readme/qr.gif"><img src="./asset/readme/qr.gif" width="60%" height="60%"></a></div></td>
-           <td>2. (병사) 식사 후 본인식별용 QR코드 스캔</td>
-        </tr>
-        <tr>
-            <td rowspan="1"><div align="center"><a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/asset/readme/finished_meal.gif"><img src="./asset/readme/finished_meal.gif" width="60%" height="60%"></a></div></td>
-           <td>3. (병사) 잔반 버리기 전 화면 속 규격에 식판 맞추고 스캔 </td>
-        </tr>
-   </tbody>
-</table>
-
-
-
-<table>
-        <tbody>
-		<tr>
-			<td colspan=2>
-				<br>
-				<b>잔반도 줄이고 포상도 얻고, 일석이조의 챌린지</b><br>
-				<br>
-			</td>
-		</tr>
-		<tr>
-            <td rowspan="1"><div align="center"><a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/asset/readme/challenge.gif"><img src="./asset/readme/challenge.gif" width="60%" height="60%"></a></div></td>
-            <td width="33%"> 챌린지 등록 및 삭제 </td>
-        </tr>
-        <tr>
-            <td rowspan="1"><div align="center"><a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/asset/readme/info.gif"><img src="./asset/readme/info.gif" width="60%" height="60%"></a></div></td>
-           <td>챌린지 정보 확인 (포상, 진행기간 등) </td>
-        </tr>
-        <tr>
-            <td rowspan="1"><div align="center"><a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/asset/readme/leaderboard.gif"><img src="./asset/readme/leaderboard.gif" width="60%" height="60%"></a></div></td>
-           <td>리더보드에서 챌린지 최신 순위 확인</td>
+            <td rowspan="1"><div align="center"><a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/gifs/mobile_menu_page.gif" src="./assets/readme/gifs/mobile_menu_page.gif" width="60%" height="60%"></a></div></td>
+            <td width="40%"> Customers can effortlessly check out menu offerings with a scroll bar for seamless navigation  </td>
         </tr>
    </tbody>
 </table>
