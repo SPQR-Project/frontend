@@ -358,7 +358,7 @@ The design was crafted with an aim to be user-friendly and intuitive. A fixed co
 
 Designing these elements in advance proved highly beneficial for the frontend development process. With a pre-defined layout, colors, typography, and icons, the coding process was streamlined and ensured alignment with the design vision, culminating in a cohesive and user-friendly application.
 
-Shown below is a representation of how this design was implemented in the project:
+Shown below is a representation of how this design was implemented in the project.
 
 ### Implementation of Design
 #### Mobile
