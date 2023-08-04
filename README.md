@@ -48,7 +48,7 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
                 QR Code attached to a table at a restaurant
            </td>
            <td align="center">
-                Video of user scanning QR code at a restaurant table and opening the menu
+                Video of user scanning QR code at a restaurant table to open the menu
            </td>
            <td align="center">
                 QR Mondrian being used on a computer in a restaurant's kitchen, alongside the POS system
