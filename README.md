@@ -122,7 +122,7 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
         </tr>
         <tr>
             <td> 
-                On the Login Page, users from either the restaurant's HQ or a branch can log in with unique credentials. I have established a structure of permissions that distinguishes between HQ and branch-level access, thereby ensuring appropriate access control within our system.
+                On the Login Page, users from either the restaurant's "HQ" or a "Branch" can log in with unique credentials. I have established a structure of permissions that distinguishes between HQ and Branch-level access, thereby ensuring appropriate access control within our system.
             </td>
         </tr>
     </tbody>
@@ -147,7 +147,7 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
         </tr>
         <tr>
             <td> 
-                On the Menu Page (for HQ-access users), users have the ability to view current menus, as well as delete menu categories or individual menu items.
+                On the Menu Page (for HQ-access users), users have the ability to view current offered menus, as well as delete menu categories or individual menu items.
             </td>
         </tr>
     </tbody>
@@ -247,7 +247,32 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
         </tr>
         <tr>
             <td> 
-                On the Menu Page (for branch-access users),
+                On the Menu Page (for Branch-access users), users can view the currently offered menus, stop menu items if they've run out of stock, and reactivate them once they're available again.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <b>Web Order Page(Branch)</b>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="1" width="750px">
+                <div align="center">
+                    <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/gifs/web_order_page_branch.gif">
+                        <img src="./assets/readme/gifs/web_order_page_branch.gif">
+                    </a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                On the Order Page (for Branch-access users), users can monitor the ongoing orders for each table, manage incoming orders by accepting or rejecting them, and close orders when the customer has completed their payment and left.
             </td>
         </tr>
     </tbody>
