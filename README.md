@@ -119,10 +119,10 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
     </tr>
     <tr>
         <td align="center">
-            <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/design/initial_wireframe.png">Initial Wireframe</a>
+            <a href="https://www.figma.com/file/iI0nOUBhGlFyCYAuTRejUd/Initial-Wireframe?type=design&node-id=0%3A1&mode=design&t=42ftTdJPHl690vdz-1">Initial Wireframe</a>
         </td>
         <td align="center">
-            <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/design/final_mockup.png">Final Mockup</a>
+            <a href="https://www.figma.com/file/qyP48DpYLIlmFCLPC4oYa6/Final-Mockup?type=design&node-id=0%3A1&mode=design&t=42ftTdJPHl690vdz-1">Final Mockup</a>
         </td>
     </tr>
   <tr>
@@ -135,10 +135,10 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
     </tr>
     <tr>
         <td align="center">
-            <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/design/color_style.png">Color Style Guide</a>
+            <a href="https://www.figma.com/file/qyP48DpYLIlmFCLPC4oYa6/Final-Mockup?type=design&node-id=1%3A2248&mode=design&t=42ftTdJPHl690vdz-1">Color Style Guide</a>
         </td>
         <td align="center">
-            <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/design/text_style.png">Text Style Guide</a>
+            <a href="https://www.figma.com/file/qyP48DpYLIlmFCLPC4oYa6/Final-Mockup?type=design&node-id=1%3A2249&mode=design&t=42ftTdJPHl690vdz-1">Text Style Guide</a>
         </td>
     </tr>
 </table>
