@@ -106,6 +106,9 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
 </table>
 <br>
 
+## Design <a name="design"></a>
+<br>
+
 ## Tech Stack <a name="techstack"></a>
 
 ### **Frontend** <a name="frontend"></a>
@@ -204,3 +207,32 @@ qr_mondrian_schema:\
 |[multer-s3](https://www.npmjs.com/package/multer)| Middleware to handle form-data when uploading images |
 |[sequelize](https://www.npmjs.com/package/sequelize)| ORM tool to handle database transactions |
 <br>
+
+### **Cloud** <a name="cloud"></a>
+
+|AWS|
+|:---:|
+|<a href="https://aws.amazon.com/"><img src="./assets/readme/logos/aws_logo.png" width = "60px"></a>|
+
+<table>
+    <tr>
+        <td>
+            <img src="./assets/readme/diagrams/system_architecture.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <a href="https://dbdiagram.io/d/64ca9d2302bd1c4a5e2395dd">System Architecture</a>
+        </td>
+    </tr>
+</table>
+
+### List of Services in Use
+
+|Service|Usage| 
+|:---:|:---:|
+|[Amazon Cognito](https://aws.amazon.com/cognito/)| CIAM to handle user login |
+|[Amazon Route53](https://aws.amazon.com/route53/)| DNS service to map the frontend EC2 server to a custom URL |
+|[Amazon EC2](https://aws.amazon.com/ec2/)| Virtual server used alongside PM2 to host frontend and backend |
+|[Amazon RDS](https://aws.amazon.com/rds/)| Databse service(MySql) to store data |
+|[Amazon S3](https://aws.amazon.com/s3/)| Storage service for images |
