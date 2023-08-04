@@ -27,7 +27,7 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
 
 ## Features <a name="features"></a>
 
-### Mobile
+### Mobile 
 <table>
     <tbody>
         <tr>
@@ -105,6 +105,136 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
 <br>
 
 ## Design <a name="design"></a>
+
+### Design
+
+<table>
+    <tr>
+        <td>
+            <img src="./assets/readme/design/wireframe.png">
+        </td>
+        <td>
+            <img src="./assets/readme/design/design.png">
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/design/initial_wireframe.png">Initial Wireframe</a>
+        </td>
+        <td align="center">
+            <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/design/final_mockup.png">Final Mockup</a>
+        </td>
+    </tr>
+  <tr>
+        <td>
+            <img src="./assets/readme/design/color_style.png">
+        </td>
+        <td>
+            <img src="./assets/readme/design/text_style.png">
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/design/color_style.png">Color Style Guide</a>
+        </td>
+        <td align="center">
+            <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/design/text_style.png">Text Style Guide</a>
+        </td>
+    </tr>
+</table>
+
+### Implementation of Design
+#### Mobile
+<table>
+    <tbody>
+        <tr>
+            <td width = "250px">
+                <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/pages/mobile_menu_page.png">
+                    <img src="./assets/readme/pages/mobile_menu_page.png">
+                </a>
+            </td>
+            <td width = "250px">
+                <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/pages/mobile_menu_details_page.png">
+                    <img src="./assets/readme/pages/mobile_menu_details_page.png">
+                </a>
+            </td>
+            <td width = "250px">
+                <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/pages/mobile_cart_page.png">
+                    <img src="./assets/readme/pages/mobile_cart_page.png">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td align = "center">Mobile Menu Page</td>
+            <td align = "center">Mobile Menu Details Page</td>
+            <td align = "center"> Mobile Cart Page</td>
+        </tr>
+    </tbody>
+</table>
+
+#### Web
+<table>
+    <tbody>
+        <tr>
+            <td colspan="2" align="center">
+                <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/pages/web_login_page.png">
+                    <img src="./assets/readme/pages/web_login_page.png" width="50%">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">Web Login Page</td>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/pages/web_menu_page_hq.png">
+                    <img src="./assets/readme/pages/web_menu_page_hq.png">
+                </a>
+            </td>
+            <td>
+                <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/pages/web_menu_add_page_hq.png">
+                    <img src="./assets/readme/pages/web_menu_add_page_hq.png">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">Web Menu Page(HQ)</td>
+            <td align="center">Web Menu Add Page(HQ)</td>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/pages/web_menu_edit_page_hq.png">
+                    <img src="./assets/readme/pages/web_menu_add_page_hq.png">
+                </a>
+            </td>
+            <td>
+                <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/pages/web_menu_display_order_edit_page_hq.png">
+                    <img src="./assets/readme/pages/web_menu_display_order_edit_page_hq.png">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">Web Menu Edit Page(HQ)</td>
+            <td align="center">Web Menu Display Order Edit Page(HQ)</td>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/pages/web_menu_page_branch.png">
+                    <img src="./assets/readme/pages/web_menu_page_branch.png">
+                </a>
+            </td>
+            <td>
+                <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/pages/web_menu_page_hq.png">
+                    <img src="./assets/readme/pages/web_order_page_branch.png">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">Web Menu Page(Branch)</td>
+            <td align="center">Web Order Page(Branch)</td>
+        </tr>
+    </tbody>
+</table>
 <br>
 
 ## Tech Stack <a name="techstack"></a>
