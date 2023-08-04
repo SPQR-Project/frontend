@@ -22,29 +22,40 @@ For customers, this system removes the usual wait for a server to provide the me
 For restaurant owners, "QR Mondrian" brings a new level of efficiency. Owners can make real-time updates to menus and immediately stop orders when a dish runs out. This effective order management helps reduce errors and can also help decrease operational costs.
 
 In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution, redefining the dining and ordering process for customers and restaurant owners alike.
+<br>
+<br>
 
 <table>
     <tbody>
         <tr>
-            <td rowpsan="3">
-                <b>QR Mondrian in use at a restaurant</b>
+            <td colspan="3">
+                <b>QR Mondrian in Real-World Settings</b>
             </td>
         </tr>
         <tr>
-           <td rowspan="3">
-                <div align="center" width = "50px">
-                        <img src="./assets/readme/gifs/mobile_menu_page.gif" width = "25%">
-                </div>
-            </td>
+           <td width="30%">
+              <img src="./assets/readme/in_use/table.jpeg">
+           </td>
+           <td width="30%">
+              <img src="./assets/readme/in_use/simulation.gif"> 
+           </td>
+           <td width="40%">
+              <img src="./assets/readme/in_use/restaurant.jpeg">
+           </td>
         </tr>
        <tr>
-            <td rowpsan="3">
-                <b>QR Mondrian in use at a restaurant</b>
-            </td>
+           <td align="center">
+                QR Code attached to a table at a restaurant
+           </td>
+           <td align="center">
+                Video of user scanning QR code at a restaurant table and opening the menu
+           </td>
+           <td align="center">
+                QR Mondrian being used on a computer in a restaurant's kitchen, alongside the POS system
+           </td>
         </tr>
     </tbody>
 </table>
-
 <br>
 
 ## Features <a name="features"></a>
@@ -341,6 +352,14 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
     </tr>
 </table>
 
+Figma was utilized in the design process due to its cloud-based platform and versatile features, offering flexibility to design from any location. A style guide and text guide were created to ensure uniformity and consistency in visuals and text across the application.
+
+The design was crafted with an aim to be user-friendly and intuitive. A fixed color scheme and the use of intuitive icons formed part of this strategy, facilitating an effortless navigation experience for both restaurants and customers.
+
+Designing these elements in advance proved highly beneficial for the frontend development process. With a pre-defined layout, colors, typography, and icons, the coding process was streamlined and ensured alignment with the design vision, culminating in a cohesive and user-friendly application.
+
+Shown below is a representation of how this design was meticulously implemented in the project:
+
 ### Implementation of Design
 #### Mobile
 <table>
@@ -461,6 +480,14 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
         </td>
     </tr>
 </table>
+
+React was selected for this project due to its efficiency, flexibility, and robust capabilities. As a JavaScript library designed for building user interfaces, React helps to create a smoother, faster user experience.
+
+React's virtual DOM is a key feature that improves application performance. It minimizes direct changes to the actual DOM, leading to faster and more efficient rendering of web pages. This was an essential factor in ensuring a seamless user experience, whether for customers browsing the menu or restaurants managing their orders.
+
+The user flow was carefully designed with the intent of providing an intuitive and effortless navigation experience for both customers and restaurants.
+
+The 'Customer Userflow' details the steps a customer would take, starting from scanning the QR code to placing an order, while the 'Restaurant Userflow' outlines the process for restaurants to efficiently manage their orders and menus. Both these user flows were thoughtfully designed, keeping in mind the potential needs and actions of the end users, ensuring their journey through the application is as smooth as possible.
 
 ### List of Libraries in Use
 
