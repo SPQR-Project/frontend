@@ -212,7 +212,7 @@ qr_mondrian_schema:\
 
 |AWS|
 |:---:|
-|<a href="https://aws.amazon.com/"><img src="./assets/readme/logos/aws_logo.png" width = "80px"></a>|
+|<a href="https://aws.amazon.com/"><img src="./assets/readme/logos/aws_logo.png" width = "60px"></a>|
 
 <table>
     <tr>
@@ -231,10 +231,8 @@ qr_mondrian_schema:\
 
 |Service|Usage| 
 |:---:|:---:|
-| Used Technology | Purpose |
-|:---:|:---:|
+|[Amazon Cognito](https://aws.amazon.com/cognito/)| CIAM to handle user login |
 |[Amazon Route53](https://aws.amazon.com/route53/)| DNS service to map the frontend EC2 server to a custom URL |
-|[Amazon S3](https://aws.amazon.com/s3/)| Storage service for images |
 |[Amazon EC2](https://aws.amazon.com/ec2/)| Virtual server used alongside PM2 to host frontend and backend |
 |[Amazon RDS](https://aws.amazon.com/rds/)| Databse service(MySql) to store data |
-|[Amazon Cognito](https://aws.amazon.com/cognito/)| CIAM to handle your login |
+|[Amazon S3](https://aws.amazon.com/s3/)| Storage service for images |
