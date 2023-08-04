@@ -175,8 +175,6 @@ const MenuDisplayOrderEditPage = () => {
         display_order,
       })),
     };
-    console.log(data);
-    return;
     try {
       const response = await fetch(
         `${serverAddress}/menu_w/${restaurantId}/${branchId}/display_order`,
