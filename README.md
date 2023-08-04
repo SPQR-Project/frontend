@@ -489,7 +489,7 @@ The user flow was carefully designed with the intent of providing an intuitive a
 
 The 'Customer Userflow' details the steps a customer would take, starting from scanning the QR code to placing an order, while the 'Restaurant Userflow' outlines the process for restaurants to efficiently manage their orders and menus. Both these user flows were thoughtfully designed, keeping in mind the potential needs and actions of the end users, ensuring their journey through the application is as smooth as possible.
 
-### List of Libraries in Use
+#### List of Libraries in Use
 
 |Library|Usage 
 |:---:|:---:|
@@ -519,7 +519,7 @@ The 'Customer Userflow' details the steps a customer would take, starting from s
     </tr>
 </table>
 
-### Description of Tables
+#### Description of Tables
 
 qr_mondrian_schema:\
 &nbsp; - **restaurants**: basic information about different restaurants\
@@ -546,7 +546,7 @@ In line with the principle of single responsibility, each table in the database 
 
 The backend API, conforming to RESTful principles, supported all CRUD operations: GET, PUT, POST, and DELETE, ensuring standardized practices for data interaction. The API endpoints were logically segmented based on functionality, simplifying use and maintenance.
 
-### APIs
+#### APIs
 
 | Type | View | Method | Feature | URL |
 | ---- |  ---- | ---- | ---- | ---- |
@@ -563,7 +563,7 @@ The backend API, conforming to RESTful principles, supported all CRUD operations
 | Web | Menu Add View | POST | [Create new menu](https://github.com/SPQR-Project/backend/wiki/Create-new-menu) | `/menu_w/:restaurant_id/:branch_id/menu`|✅|
 | Web | Menu Edit View | PUT | [Edit menu](https://github.com/SPQR-Project/backend/wiki/Edit-Menu) |  `/menu_w/:restaurant_id/:branch_id/:menu_id/menu`|✅|
 
-### List of Libraries in Use
+#### List of Libraries in Use
 
 |Library|Usage 
 |:---:|:---:|
@@ -606,7 +606,7 @@ Lastly, Amazon S3 provided scalable object storage for storing the application's
 
 Each of these components was chosen for its ability to enhance the application's performance, reliability, and user experience.
 
-### List of Services in Use
+#### List of Services in Use
 
 |Service|Usage| 
 |:---:|:---:|
