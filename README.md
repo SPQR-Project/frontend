@@ -22,6 +22,29 @@ For customers, this system removes the usual wait for a server to provide the me
 For restaurant owners, "QR Mondrian" brings a new level of efficiency. Owners can make real-time updates to menus and immediately stop orders when a dish runs out. This effective order management helps reduce errors and can also help decrease operational costs.
 
 In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution, redefining the dining and ordering process for customers and restaurant owners alike.
+
+<table>
+    <tbody>
+        <tr>
+            <td rowpsan="3">
+                <b>QR Mondrian in use at a restaurant</b>
+            </td>
+        </tr>
+        <tr>
+           <td rowspan="3">
+                <div align="center" width = "50px">
+                        <img src="./assets/readme/gifs/mobile_menu_page.gif" width = "25%">
+                </div>
+            </td>
+        </tr>
+       <tr>
+            <td rowpsan="3">
+                <b>QR Mondrian in use at a restaurant</b>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
 <br>
 
 ## Features <a name="features"></a>
