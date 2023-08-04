@@ -13,7 +13,6 @@
     1. [Frontend](#frontend)
     2. [Backend](#backend)
     3. [Cloud](#cloud)
-<br>
 
 ## Description <a name="introduction"></a>
 "QR Mondrian" is a QR ordering system that boosts the dining experience and simplifies restaurant operations. Using QR code technology, customers can view menus and place orders directly from their phones.
@@ -98,6 +97,82 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
         <tr>
             <td> 
                 On the Cart Page, customers can edit menu item details, modify quantities, delete items, review past orders, and finally submit their current order.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+### Web 
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <b>Web Login Page</b>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="1">
+                <div align="center">
+                    <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/gifs/web_login_page.gif">
+                        <img src="./assets/readme/gifs/web_login_page.gif">
+                    </a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                On the Login Page, users from either the restaurant's HQ or a branch can log in with unique credentials. I have established a structure of permissions that distinguishes between HQ and branch-level access, thereby ensuring appropriate access control within our system.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <b>Web Menu Page(HQ)</b>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="1">
+                <div align="center">
+                    <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/gifs/web_menu_page_hq.gif">
+                        <img src="./assets/readme/gifs/web_menu_page_hq.gif">
+                    </a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                On the Menu Page (for HQ-access users), users have the ability to view current menus, as well as delete menu categories or individual menu items.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <b>Web Menu Add Page(HQ)</b>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="1">
+                <div align="center">
+                    <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/gifs/web_menu_add_page_hq.gif">
+                        <img src="./assets/readme/gifs/web_menu_add_page_hq.gif">
+                    </a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                On the Menu Add Page (for HQ-access users), users can populate the input fields and upload a photo to add a new menu item.
             </td>
         </tr>
     </tbody>
