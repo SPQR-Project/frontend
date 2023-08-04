@@ -10,9 +10,9 @@
 2. [Features](#features)
 3. [Design](#design)
 4. [Tech Stack](#techstack)
-    1. [Cloud](#cloud)
+    1. [Frontend](#frontend)
     2. [Backend](#backend)
-    3. [Frontend](#frontend)
+    3. [Cloud](#cloud)
 <br>
 
 ## Description <a name="introduction"></a>
@@ -108,50 +108,6 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
 
 ## Tech Stack <a name="techstack"></a>
 
-### **Backend** <a name="backend"></a>
-
-|Node.js|
-|:---:|
-|<a href="https://nodejs.org/en"><img src="./assets/readme/logos/nodejs_logo.png" width = "60px"></a>|
-
-<table>
-    <tr>
-        <td width="100%">
-            <img src="./assets/readme/diagrams/database_structure.png">
-        </td>
-    </tr>
-    <tr>
-        <td align="center">
-            <a href="https://dbdiagram.io/d/64ca9d2302bd1c4a5e2395dd">Database Structure</a>
-        </td>
-    </tr>
-</table>
-
-### Description of Tables
-
-qr_mondrian_schema:\
-&nbsp; - **restaurants**: basic information about different restaurants\
-&nbsp; - **branches**: information about the various branches of each restaurant\
-&nbsp; - **branches_menu_status**: the status of menus at different branches\
-&nbsp; - **main_categories**: the main categories of menus in each restaurant\
-&nbsp; - **main_menus**: the main menus under each category for the restaurants\
-&nbsp; - **option_categories**: the various option categories under each main menu item\
-&nbsp; - **option_menus**: the various option menus under each option category\
-&nbsp; - **orders**: the details of customer orders at each branch\
-&nbsp; - **sub_orders**: sub orders that make up a order\
-&nbsp; - **order_items**: information about the items included in each sub order\
-&nbsp; - **order_item_options**: the option items chosen for each order item
-
-### List of Libraries in Use
-
-|Library|Usage 
-|:---:|:---:|
-|[express](https://www.npmjs.com/package/express)| Application framework for building RESTful APIs  |
-|[@aws-sdk/client-s3](https://www.npmjs.com/package/aws-sdk)| AWS sdk for accessing S3 buckets|
-|[multer-s3](https://www.npmjs.com/package/multer)| Middleware to handle form-data when uploading images |
-|[sequelize](https://www.npmjs.com/package/sequelize)| ORM tool to handle database transactions |
-<br>
-
 ### **Frontend** <a name="frontend"></a>
 
 |React|
@@ -186,4 +142,65 @@ qr_mondrian_schema:\
 |[crypto-js](https://www.npmjs.com/package/crypto-js)| Used to encode and decode URLs for additional security |
 |[jwt-decode](https://www.npmjs.com/package/jwt-decode)| Used for decode JWT tokens for handling user login |
 |[react-beautiful-dnd](https://www.npmjs.com/package/react-beautiful-dnd)| Used to implement drag and drop functionality |
+<br>
+
+### **Backend** <a name="backend"></a>
+
+|Node.js|
+|:---:|
+|<a href="https://nodejs.org/en"><img src="./assets/readme/logos/nodejs_logo.png" width = "80px"></a>|
+
+<table>
+    <tr>
+        <td>
+            <img src="./assets/readme/diagrams/database_structure.png" height = "600px">
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <a href="https://dbdiagram.io/d/64ca9d2302bd1c4a5e2395dd">Database Structure</a>
+        </td>
+    </tr>
+</table>
+
+### Description of Tables
+
+qr_mondrian_schema:\
+&nbsp; - **restaurants**: basic information about different restaurants\
+&nbsp; - **branches**: information about the various branches of each restaurant\
+&nbsp; - **branches_menu_status**: the status of menus at different branches\
+&nbsp; - **main_categories**: the main categories of menus in each restaurant\
+&nbsp; - **main_menus**: the main menus under each category for the restaurants\
+&nbsp; - **option_categories**: the various option categories under each main menu item\
+&nbsp; - **option_menus**: the various option menus under each option category\
+&nbsp; - **orders**: the details of customer orders at each branch\
+&nbsp; - **sub_orders**: sub orders that make up a order\
+&nbsp; - **order_items**: information about the items included in each sub order\
+&nbsp; - **order_item_options**: the option items chosen for each order item
+
+### APIs
+
+| Type | View | Method | Feature | URL |
+| ---- |  ---- | ---- | ---- | ---- |
+| Universal | Web/Mobile Menu View| GET | [Get all menu](https://github.com/SPQR-Project/backend/wiki/Get-all-menu) | `/menu/:restaurant_id/:branch_id/:table_number/`|✅|
+| Universal | Web/Mobile Menu Details View | GET | [Get menu details](https://github.com/SPQR-Project/backend/wiki/Get-menu-details) | `/menu/:restaurant_id/:branch_id/:table_number/:menu_id/`|✅|
+| Mobile | Cart View | GET | [Get past orders](https://github.com/SPQR-Project/backend/wiki/Get-past-orders) | `/cart_m/:restaurant_id/:branch_id/:table_number/`| ✅|
+| Mobile | Cart View | POST | [Post current order](https://github.com/SPQR-Project/backend/wiki/Post-current-order) | `/cart_m/:restaurant_id/:branch_id/:table_number/`|✅|
+| Web | Order View | GET | [Get all orders](https://github.com/SPQR-Project/backend/wiki/Get-all-orders) | `/order_w/:restaurant_id/:branch_id/`|✅|
+| Web | Order View | PUT | [Update order status](https://github.com/SPQR-Project/backend/wiki/Update-order-status) | `/order_w/:restaurant_id/:branch_id/`|✅|
+| Web | Menu View | PUT | [Update menu status](https://github.com/SPQR-Project/backend/wiki/Update-menu-status) | `/menu_w/:restaurant_id/:branch_id/status`|✅|
+| Web | Menu View | DELETE | [Delete menu or category](https://github.com/SPQR-Project/backend/wiki/Delete-menu-or-category) | `/menu_w/:restaurant_id/:branch_id/request_type/:request_id`|✅|
+| Web | Menu Display Order Edit View | POST | [Create new category](https://github.com/SPQR-Project/backend/wiki/Create-new-category) | `/menu_w/:restaurant_id/:branch_id/category`|✅|
+| Web | Menu Display Order Edit View | PUT | [Edit display order](https://github.com/SPQR-Project/backend/wiki/Edit-display-order) |  `/menu_w/:restaurant_id/:branch_id/display_order`|✅|
+| Web | Menu Add View | POST | [Create new menu](https://github.com/SPQR-Project/backend/wiki/Create-new-menu) | `/menu_w/:restaurant_id/:branch_id/menu`|✅|
+| Web | Menu Edit View | PUT | [Edit menu](https://github.com/SPQR-Project/backend/wiki/Edit-Menu) |  `/menu_w/:restaurant_id/:branch_id/:menu_id/menu`|✅|
+
+### List of Libraries in Use
+
+|Library|Usage 
+|:---:|:---:|
+|[express](https://www.npmjs.com/package/express)| Application framework for building RESTful APIs  |
+|[@aws-sdk/client-s3](https://www.npmjs.com/package/aws-sdk)| AWS sdk for accessing S3 buckets|
+|[multer-s3](https://www.npmjs.com/package/multer)| Middleware to handle form-data when uploading images |
+|[sequelize](https://www.npmjs.com/package/sequelize)| ORM tool to handle database transactions |
 <br>
