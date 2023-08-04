@@ -127,7 +127,7 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
     </tr>
   <tr>
         <td>
-            <img src="./assets/readme/design/color_style.png">
+            <img src="./assets/readme/design/color_style.png">
         </td>
         <td>
             <img src="./assets/readme/design/text_style.png">
