@@ -172,7 +172,82 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
         </tr>
         <tr>
             <td> 
-                On the Menu Add Page (for HQ-access users), users can populate the input fields and upload a photo to add a new menu item.
+                On the Menu Add Page (for HQ-access users), users can input details such as name, price, description, and category. Additionally, they can create associated option menus and upload a photo to enrich the new menu item.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <b>Web Edit Page(HQ)</b>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="1" width="750px">
+                <div align="center">
+                    <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/gifs/web_menu_edit_page_hq.gif">
+                        <img src="./assets/readme/gifs/web_menu_edit_page_hq.gif">
+                    </a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                On the Menu Edit Page (for HQ-access users), users can update details such as name, price, description, and category. They can also modify associated option menus and update the menu item's photo as needed.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <b>Web Menu Display Order Edit Page(HQ)</b>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="1" width="750px">
+                <div align="center">
+                    <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/gifs/web_menu_display_order_edit_page_hq.gif">
+                        <img src="./assets/readme/gifs/web_menu_display_order_edit_page_hq.gif">
+                    </a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                On the Menu Display Order Edit Page (for HQ-access users), users can rearrange the display order of menu categories and items. They also have the ability to add new menu categories when needed.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <b>Web Menu Page(Branch)</b>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="1" width="750px">
+                <div align="center">
+                    <a href="https://github.com/SPQR-Project/frontend/blob/main/assets/readme/gifs/web_menu_page_branch.gif">
+                        <img src="./assets/readme/gifs/web_menu_page_branch.gif">
+                    </a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                On the Menu Page (for branch-access users),
             </td>
         </tr>
     </tbody>
