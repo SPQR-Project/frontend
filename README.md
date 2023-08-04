@@ -27,8 +27,6 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
 
 ## Features <a name="features"></a>
 
-
-
 ### Mobile
 <table>
     <tbody>
@@ -222,7 +220,7 @@ qr_mondrian_schema:\
     </tr>
     <tr>
         <td align="center">
-            <a href="https://dbdiagram.io/d/64ca9d2302bd1c4a5e2395dd">System Architecture</a>
+            <a href="https://drive.google.com/file/d/1kV82iaBPt1sfN_dtzdvg5dQ6-JNbQNyn/view?usp=sharing">System Architecture</a>
         </td>
     </tr>
 </table>
@@ -234,5 +232,5 @@ qr_mondrian_schema:\
 |[Amazon Cognito](https://aws.amazon.com/cognito/)| CIAM to handle user login |
 |[Amazon Route53](https://aws.amazon.com/route53/)| DNS service to map the frontend EC2 server to a custom URL |
 |[Amazon EC2](https://aws.amazon.com/ec2/)| Virtual server used alongside PM2 to host frontend and backend |
-|[Amazon RDS](https://aws.amazon.com/rds/)| Databse service(MySql) to store data |
+|[Amazon RDS](https://aws.amazon.com/rds/)| Databse service(MySQL) to store data |
 |[Amazon S3](https://aws.amazon.com/s3/)| Storage service for images |
