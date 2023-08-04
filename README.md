@@ -534,6 +534,18 @@ qr_mondrian_schema:\
 &nbsp; - **order_items**: information about the items included in each sub order\
 &nbsp; - **order_item_options**: the option items chosen for each order item
 
+The backend of the project was built using Node.js, appreciated for its efficiency, scalability, and seamless integration with React.js. Node.js facilitates the creation of a high-performance server capable of handling concurrent requests, crucial for a real-time application like this one, catering to multiple restaurants and customers.
+
+The design of the database incorporated a hierarchical structure for menus, beginning at the broadest level and moving down to more specific details. This structure started with "main_categories", followed by "main_menus". Each main menu then branched out to various "option_categories", each of which housed specific "option_menus". This organized architecture facilitated efficient data retrieval and ensured a clear layout for menu items.
+
+A similar hierarchical structure was implemented for orders. It began with an overall order that a customer placed during their visit to the restaurant. Accounting for the possibility of customers placing multiple orders during their visit, each "order" was divided into "sub_orders". This arrangement allowed customers to incrementally add to their order, similar to running a "tab", before finalizing the payment. Each sub-order comprised multiple "order items", with each order item potentially having several selected option items, stored under "order_item_options".
+
+Restaurants and branch details were stored in dedicated tables, ensuring efficient and accurate lookups. Similarly, to optimize performance, branch_menu_status was separated from the main_menu table.
+
+In line with the principle of single responsibility, each table in the database was designed to hold a specific set of data, serving one purpose. Such a division enhanced data integrity, clarity, and the efficiency of database operations.
+
+The backend API, conforming to RESTful principles, supported all CRUD operations: GET, PUT, POST, and DELETE, ensuring standardized practices for data interaction. The API endpoints were logically segmented based on functionality, simplifying use and maintenance.
+
 ### APIs
 
 | Type | View | Method | Feature | URL |
@@ -579,6 +591,20 @@ qr_mondrian_schema:\
         </td>
     </tr>
 </table>
+
+The cloud architecture for this project was constructed using Amazon Web Services (AWS), capitalizing on its extensive portfolio of scalable, integrated services, and its impressive industry prevalence. The need for a resilient and secure infrastructure that could effectively handle fluctuating load demands made AWS an obvious choice.
+
+The structure of the application was tailored to harness a selection of AWS services to achieve maximum functionality and efficiency. Amazon Cognito was implemented as a comprehensive Identity and Access Management (IAM) solution, ensuring secure user login and delivering a smooth user experience.
+
+Amazon Route53 was utilized to map the frontend EC2 server to a custom URL. This DNS service guaranteed reliable routing to the application, ensuring easy accessibility for users.
+
+Amazon EC2, an exceedingly configurable virtual server, was employed for hosting. Running in tandem with the process manager, PM2, it adeptly managed both frontend and backend services.
+
+Amazon RDS was selected for database services, with data stored in a MySQL database. It provided the advantages of automatic backups, software patching, and seamless scaling, all while maintaining high performance and availability.
+
+Lastly, Amazon S3 provided scalable object storage for storing the application's images, efficiently meeting the demands for high-volume storage and retrieval.
+
+Each of these components was chosen for its ability to enhance the application's performance, reliability, and user experience.
 
 ### List of Services in Use
 
