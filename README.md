@@ -112,7 +112,7 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
 
 |Node.js|
 |:---:|
-|<a href="https://nodejs.org/en"><img src="./assets/readme/logos/nodejs_logo.png" width = "600px"></a>|
+|<a href="https://nodejs.org/en"><img src="./assets/readme/logos/nodejs_logo.png" width = "60px"></a>|
 
 <table>
     <tr>
