@@ -186,10 +186,10 @@ In conclusion, "QR Mondrian" stands as a time-saving and cost-effective solution
 <table>
     <tr>
         <td>
-            <img src="./assets/readme/design/wireframe.png">
+            <img src="./assets/readme/design/initial_wireframe.png">
         </td>
         <td>
-            <img src="./assets/readme/design/design.png">
+            <img src="./assets/readme/design/final_mockup.png">
         </td>
     </tr>
     <tr>
